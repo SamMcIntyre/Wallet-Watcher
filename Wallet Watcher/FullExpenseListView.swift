@@ -11,7 +11,9 @@ import SwiftData
 struct FullExpenseListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
-	@Query private var expenses: [Expense]
+	@Query private var wallets: [Wallet]
+	@Query(sort: \Expense.timestamp, order: .reverse)
+	private var expenses: [Expense]
 	
 	var body: some View {
 		NavigationStack{
@@ -40,6 +42,7 @@ struct FullExpenseListView: View {
 		withAnimation {
 			for index in offsets {
 				modelContext.delete(expenses[index])
+				wallets[0].spent -= expenses[index].total
 			}
 		}
 	}

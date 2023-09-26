@@ -20,9 +20,10 @@ struct NewExpenseView: View {
 	@State private var location = ""
 	@State private var makeQuickExpense = false
 	
-	@Environment(\.modelContext) private var context
+	@Environment(\.modelContext) private var modelContext
 	@Environment(\.dismiss) private var dismiss
 	
+	@Query private var wallet: [Wallet]
 	@Query private var expenses: [Expense]
 	
 	let gratTaxLimit = 2 //digit limit for gratuity and text box
@@ -204,14 +205,24 @@ struct NewExpenseView: View {
 			cleanLocation = location
 		}
 		
+		//make new expense
 		let newExpense = Expense(price: cleanAmount, grat: cleanGrat, tax: cleanTax, purpose: cleanPurpose, location: cleanLocation)
+		
+		//make new quick expense
 		if(makeQuickExpense){
 			let newQuickExpense = QuickExpense(price: cleanAmount, grat: cleanGrat, tax: cleanTax, purpose: cleanPurpose, location: cleanLocation)
-			context.insert(newQuickExpense)
+			
+			//insert into models
+			modelContext.insert(newQuickExpense)
 		}
-		context.insert(newExpense)
+		modelContext.insert(newExpense)
+		
+		//update wallet
+		wallet[0].spent += newExpense.total
+		
+		//save to model
 		do {
-			try context.save()
+			try modelContext.save()
 		} catch {
 			print(error.localizedDescription)
 		}

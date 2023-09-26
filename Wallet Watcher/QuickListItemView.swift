@@ -14,13 +14,14 @@ struct QuickListItemView: View {
 	@Environment(\.modelContext) private var modelContext
 	@Environment(\.dismiss) private var dismiss
 	
+	@Query private var wallet: [Wallet]
 	@Query private var expenses: [Expense]
 	
     var body: some View {
 		Button(action: {quickEnterExpense(newExpense: quickExpense.returnNewExpense())}) {
 			HStack{
 				//price
-				Text("-$" + quickExpense.formattedPrice).monospaced()
+				Text("$" + quickExpense.formattedPrice).monospaced()
 				Spacer()
 				VStack{
 					//grat and tax
@@ -40,7 +41,11 @@ struct QuickListItemView: View {
 	}
 	
 	private func quickEnterExpense(newExpense: Expense){
+		//enter new expense
 		modelContext.insert(newExpense)
+		
+		//update wallet
+		wallet[0].spent += newExpense.total
 		do {
 			try modelContext.save()
 		} catch {
@@ -53,5 +58,5 @@ struct QuickListItemView: View {
 
 #Preview {
 	QuickListItemView(quickExpense: QuickExpense(price: 20.0, grat: 0.18, tax: 0.0, purpose: "default purp", location: "default loc"))
-		.modelContainer(for: [Expense.self, QuickExpense.self], inMemory: true)
+		.modelContainer(for: [Expense.self, QuickExpense.self, Wallet.self], inMemory: true)
 }

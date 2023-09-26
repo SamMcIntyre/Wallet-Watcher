@@ -11,9 +11,7 @@ import SwiftData
 @main
 struct Wallet_WatcherApp: App {
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self
-        ])
+		let schema = Schema([Expense.self, Setting.self])
 		//let entities = Schema([Expense.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
 

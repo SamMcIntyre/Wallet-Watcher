@@ -20,15 +20,27 @@ final class Expense{
 	var purpose: String
 	var location: String
 	
+	init(price: Double, grat: Double, tax: Double, purpose: String, location: String){
+		self.price = price
+		self.tax = tax
+		self.gratuity = grat
+		let totalPrice = price + (price*grat) + (price*tax)
+		self.total = totalPrice
+		self.formattedPrice = String(format: "%.2f", price)
+		self.formattedTotal = String(format: "%.2f", totalPrice)
+		self.timestamp = Date()
+		self.purpose = purpose
+		self.location = location
+	}
+	
 	init(price: Double) {
 		let tax = 0.0
-		let gratuity = 0.18
-		let taxedPrice = price + (price*tax)
-		let totalPrice = taxedPrice + (taxedPrice*gratuity)
+		let grat = 0.18
+		let totalPrice = price + (price*grat) + (price*tax)
 		
 		self.price = price
 		self.tax = tax
-		self.gratuity = gratuity
+		self.gratuity = grat
 		self.total = totalPrice
 		self.formattedPrice = String(format: "%.2f", price)
 		self.formattedTotal = String(format: "%.2f", totalPrice)
@@ -39,15 +51,14 @@ final class Expense{
 	
 	init(price: Double, purpose: String) {
 		let tax = 0.0
-		let gratuity = 0.18
-		let taxedPrice = price + (price*tax)
-		let totalPrice = taxedPrice + (taxedPrice*gratuity)
+		let grat = 0.18
+		let totalPrice = price + (price*grat) + (price*tax)
 		
 		self.price = price
 		self.tax = tax
-		self.gratuity = gratuity
+		self.gratuity = grat
 		self.total = totalPrice
-		self.formattedPrice = String(format: "%.2f", totalPrice)
+		self.formattedPrice = String(format: "%.2f", price)
 		self.formattedTotal = String(format: "%.2f", totalPrice)
 		self.timestamp = Date()
 		self.purpose = purpose
@@ -56,15 +67,14 @@ final class Expense{
 	
 	init(price: Double, purpose: String, location: String) {
 		let tax = 0.0
-		let gratuity = 0.18
-		let taxedPrice = price + (price*tax)
-		let totalPrice = taxedPrice + (taxedPrice*gratuity)
+		let grat = 0.18
+		let totalPrice = price + (price*grat) + (price*tax)
 		
 		self.price = price
 		self.tax = tax
-		self.gratuity = gratuity
+		self.gratuity = grat
 		self.total = totalPrice
-		self.formattedPrice = String(format: "%.2f", totalPrice)
+		self.formattedPrice = String(format: "%.2f", price)
 		self.formattedTotal = String(format: "%.2f", totalPrice)
 		self.timestamp = Date()
 		self.purpose = purpose

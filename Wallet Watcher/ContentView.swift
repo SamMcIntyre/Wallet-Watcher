@@ -10,33 +10,44 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    //@Query private var items: [Item]
 	@Query private var expenses: [Expense]
 	@Query private var settings: [Setting]
 	
 	@State var showingNewExpensePopover = false
+	@State private var path = NavigationPath()
+	
 	let tempBudget = 200.00
 	let tempSpent = 50.00
 
     var body: some View {
         NavigationStack {
-			Gauge(value: tempSpent, in: 0...tempBudget) {
-				Text("Wallet")
-			} currentValueLabel: {
-				Text("$" + String(format:"%.2f", tempSpent))
-					.font(.title.monospaced())
-			} minimumValueLabel: {
-				Text("0")
-					.font(.caption2.monospaced())
-			} maximumValueLabel: {
-				Text("$" + String(format:"%.2f", tempBudget))
-					.font(.caption2.monospaced())
-			}
-			.gaugeStyle(DefaultGaugeStyle())
-			.tint(.green)
-			
 			VStack{
-				List {
+				Gauge(value: tempSpent, in: 0...tempBudget) {
+					Text("Wallet")
+				} currentValueLabel: {
+					Text("Spent: $" + String(format:"%.2f", tempSpent))
+						.font(.title2.monospacedDigit())
+				} minimumValueLabel: {
+					Text("0")
+						.font(.caption2.monospaced())
+				} maximumValueLabel: {
+					Text("$" + String(format:"%.2f", tempBudget))
+						.font(.caption2.monospaced())
+				}
+				.gaugeStyle(DefaultGaugeStyle())
+				.tint(.green)
+				
+				Button(action: {showingNewExpensePopover = true}) {
+					Label("Add Expense", systemImage: "plus");
+				}
+				.buttonStyle(.borderedProminent)
+				.popover(isPresented: $showingNewExpensePopover, content: {
+					NewExpenseView()
+				})
+				
+				ExpenseListView()
+				/*List {
 					//Button("Add Expense", action: addItem)
 					Button(action: {showingNewExpensePopover = true}) {
 						Label("Add Expense", systemImage: "plus");
@@ -44,16 +55,8 @@ struct ContentView: View {
 					.popover(isPresented: $showingNewExpensePopover, content: {
 						NewExpenseView()
 					})
-					/*.popover(isPresented: $showingNewExpensePopover) {
-						NewExpenseView() { status in
-							showingNewExpensePopover = false
-							if (status == "ok") {
-								addExpense()
-							}
-						}
-					}*/
 					
-					ForEach(items) { item in
+					/*ForEach(items) { item in
 						NavigationLink {
 							Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
 						} label: {
@@ -61,9 +64,9 @@ struct ContentView: View {
 						}
 					}
 					.onDelete(perform: deleteItems)
+					 */
 					
-					/*
-					ForEach(expenses) { expense in
+					/*ForEach(expenses) { expense in
 					NavigationLink {
 					Text("\(expense.price)")
 					}
@@ -73,7 +76,8 @@ struct ContentView: View {
 					}
 					}
 					.onDelete(perform: deleteExpense)
-					*/
+					 */
+					
 					
 				}
 				.toolbar {
@@ -92,10 +96,26 @@ struct ContentView: View {
 					 }
 					 }
 					 */
+				}*/
+			}
+			.toolbar {
+				ToolbarItem(placement: .navigationBarTrailing) {
+					NavigationLink(destination: SettingsView()) {
+						Image(systemName: "gearshape")
+					}
+				 }
+				ToolbarItem(placement: .navigationBarLeading) {
+					EditButton()
 				}
 			}
+			.onAppear(){
+				//if settings.isEmpty{
+					//let newSetting = Setting()
+					//modelContext.insert(newSetting)
+				//}
+			}
         }
-    }
+	}
 
     private func addItem() {
         withAnimation {
@@ -122,21 +142,22 @@ struct ContentView: View {
 		}
 	}
 
-    private func deleteItems(offsets: IndexSet) {
+    /*private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                //modelContext.delete(items[index])
             }
         }
-    }
+    }*/
 	
 	private func openSettings(){
-		
+		//path.append(SettingsView())
 	}
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        //.modelContainer(for: Item.self, inMemory: true)
 		.modelContainer(for: Expense.self, inMemory: true)
+		.modelContainer(for: Setting.self, inMemory: true)
 }

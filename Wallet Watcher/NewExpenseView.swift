@@ -16,8 +16,8 @@ struct NewExpenseView: View {
 	@State private var value = ""
 	@State private var grat = "18" //set to default later (using defaulter() onAppear())
 	@State private var tax = "0" //set to default later
-	@State private var purpose = ""
-	@State private var location = ""
+	@State private var purpose = "" //set to default later
+	@State private var location = "" // set to default later
 	@State private var makeQuickExpense = false
 	
 	@Environment(\.modelContext) private var modelContext
@@ -38,6 +38,8 @@ struct NewExpenseView: View {
 	private func defaulter(){
 		grat = String(Int(defaults.double(forKey: "gratuity")*100))
 		tax = String(Int(defaults.double(forKey: "tax")*100))
+		purpose = defaults.string(forKey: "purpose") ?? ""
+		location = defaults.string(forKey: "location") ?? ""
 	}
 	
 	var body: some View {

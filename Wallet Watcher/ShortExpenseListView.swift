@@ -20,7 +20,6 @@ struct ShortExpenseListView: View {
 					GroupBox(label: Text("Recent Expenses").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)) {
 						List{
 							ForEach(expenses) { expense in
-								//if(expense.)
 								ExpenseListItemView(expense: expense)
 							}
 							.onDelete(perform: deleteExpense)
@@ -29,7 +28,7 @@ struct ShortExpenseListView: View {
 						.scrollDisabled(true)
 						.frame(height: 175)
 						NavigationLink(destination: FullExpenseListView()){
-							Text("View more").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+							Text("View all").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						}
 					}
 				}

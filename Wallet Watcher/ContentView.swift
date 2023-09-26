@@ -45,104 +45,106 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-			VStack{
-				ForEach(wallets) { wallet in
-					WalletGaugeView(wallet: wallet)
-				}
-				//WalletGaugeView(wallet: wallet)
-				/*Gauge(value: tempSpent, in: 0...budget) {
-					Text("Wallet")
-				} currentValueLabel: {
-					Text("Spent: $" + String(format:"%.2f", tempSpent))
-						.font(.title2.monospacedDigit())
-				} minimumValueLabel: {
-					Text("0")
-						.font(.caption2.monospaced())
-				} maximumValueLabel: {
-					Text("$" + String(format:"%.2f", budget))
-						.font(.caption2.monospaced())
-				}
-				.gaugeStyle(DefaultGaugeStyle())
-				.tint(.green)
-				 */
-				
-				Button(action: {showingNewExpensePopover = true}) {
-					Label("Add Expense", systemImage: "plus");
-				}
-				.buttonStyle(.borderedProminent)
-				.popover(isPresented: $showingNewExpensePopover, content: {
-					NewExpenseView()
-				})
-				ShortQuickListView()
-				ShortExpenseListView()
-				Spacer()
-				/*List {
-					//Button("Add Expense", action: addItem)
+			ScrollView{
+				VStack{
+					ForEach(wallets) { wallet in
+						WalletGaugeView(wallet: wallet)
+					}
+					//WalletGaugeView(wallet: wallet)
+					/*Gauge(value: tempSpent, in: 0...budget) {
+					 Text("Wallet")
+					 } currentValueLabel: {
+					 Text("Spent: $" + String(format:"%.2f", tempSpent))
+					 .font(.title2.monospacedDigit())
+					 } minimumValueLabel: {
+					 Text("0")
+					 .font(.caption2.monospaced())
+					 } maximumValueLabel: {
+					 Text("$" + String(format:"%.2f", budget))
+					 .font(.caption2.monospaced())
+					 }
+					 .gaugeStyle(DefaultGaugeStyle())
+					 .tint(.green)
+					 */
+					
 					Button(action: {showingNewExpensePopover = true}) {
 						Label("Add Expense", systemImage: "plus");
 					}
+					.buttonStyle(.borderedProminent)
 					.popover(isPresented: $showingNewExpensePopover, content: {
 						NewExpenseView()
 					})
-					
-					/*ForEach(items) { item in
-						NavigationLink {
-							Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-						} label: {
-							Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-						}
-					}
-					.onDelete(perform: deleteItems)
-					 */
-					
-					/*ForEach(expenses) { expense in
-					NavigationLink {
-					Text("\(expense.price)")
-					}
-					label: {
-					Text(expense.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-					
-					}
-					}
-					.onDelete(perform: deleteExpense)
-					 */
-					
-					
+					ShortQuickListView()
+					ShortExpenseListView()
+					Spacer()
+					/*List {
+					 //Button("Add Expense", action: addItem)
+					 Button(action: {showingNewExpensePopover = true}) {
+					 Label("Add Expense", systemImage: "plus");
+					 }
+					 .popover(isPresented: $showingNewExpensePopover, content: {
+					 NewExpenseView()
+					 })
+					 
+					 /*ForEach(items) { item in
+					  NavigationLink {
+					  Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+					  } label: {
+					  Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+					  }
+					  }
+					  .onDelete(perform: deleteItems)
+					  */
+					 
+					 /*ForEach(expenses) { expense in
+					  NavigationLink {
+					  Text("\(expense.price)")
+					  }
+					  label: {
+					  Text(expense.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+					  
+					  }
+					  }
+					  .onDelete(perform: deleteExpense)
+					  */
+					 
+					 
+					 }
+					 .toolbar {
+					 ToolbarItem(placement: .navigationBarTrailing) {
+					 Button(action: openSettings) {
+					 Label("Open Settings", systemImage: "gearshape")
+					 }
+					 }
+					 /*
+					  ToolbarItem(placement: .navigationBarTrailing) {
+					  EditButton()
+					  }
+					  ToolbarItem {
+					  Button(action: addItem) {
+					  Label("Add Item", systemImage: "plus")
+					  }
+					  }
+					  */
+					 }*/
 				}
 				.toolbar {
 					ToolbarItem(placement: .navigationBarTrailing) {
-						Button(action: openSettings) {
-							Label("Open Settings", systemImage: "gearshape")
+						NavigationLink(destination: SettingsView()) {
+							Image(systemName: "gearshape")
 						}
 					}
-					/*
-					 ToolbarItem(placement: .navigationBarTrailing) {
-					 EditButton()
-					 }
-					 ToolbarItem {
-					 Button(action: addItem) {
-					 Label("Add Item", systemImage: "plus")
-					 }
-					 }
-					 */
-				}*/
-			}
-			.toolbar {
-				ToolbarItem(placement: .navigationBarTrailing) {
-					NavigationLink(destination: SettingsView()) {
-						Image(systemName: "gearshape")
+					ToolbarItem(placement: .navigationBarLeading) {
+						EditButton()
 					}
-				 }
-				ToolbarItem(placement: .navigationBarLeading) {
-					EditButton()
 				}
-			}
-			.onAppear(){
-				defaulter()
-				//if settings.isEmpty{
+				.onAppear(){
+					defaulter()
+					//if settings.isEmpty{
 					//let newSetting = Setting()
 					//modelContext.insert(newSetting)
-				//}
+					//}
+				}
 			}
         }
 	}

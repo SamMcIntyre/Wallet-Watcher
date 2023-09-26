@@ -23,6 +23,8 @@ struct SettingsView: View {
 	@State private var purpose = ""
 	@State private var location = ""
 	
+	@State private var isShowingDialog = false
+	
 	let defaults = UserDefaults.standard
 	
 	let gratTaxLimit = 2 //digit limit for gratuity and text box
@@ -31,7 +33,7 @@ struct SettingsView: View {
 		ScrollView{
 			VStack{
 				Text("Settings").font(.largeTitle)
-				Text("Will not take effect unless saved.").font(.footnote)
+				//Text("Will not take effect unless saved.").font(.footnote)
 				
 				// BUDGET
 				Text("Update Budget").padding(.top).font(.headline)
@@ -52,6 +54,7 @@ struct SettingsView: View {
 				}
 				
 				Spacer()
+				Divider()
 				
 				// DEFAULTS
 				GroupBox{
@@ -123,8 +126,21 @@ struct SettingsView: View {
 				}
 				
 				Spacer()
+				Divider()
 				
-				Button("Save", action: {saveSettings()})
+				//RESET
+				Button("Clear Expenses", action: {isShowingDialog = true})
+					.font(.headline)
+					.buttonStyle(.borderedProminent)
+					.tint(.red)
+					.padding(.top)
+					.confirmationDialog("Are you sure you want to clear all expenses?", isPresented: $isShowingDialog) {
+						Button("Clear All", role: .destructive) {
+										clearExpenses()
+									}
+								} message: {
+									Text("You cannot undo this action.")
+							}
 			}
 		}
 		.onAppear(){
@@ -145,9 +161,6 @@ struct SettingsView: View {
 	private func updateDefaults(newGratStr: String, newTaxStr: String, newPur: String, newLoc:String){
 		var cleanGrat = 0.0
 		var cleanTax = 0.0
-		
-		print(newGratStr)
-		print(newTaxStr)
 		
 		//gratuity
 		if (newGratStr != ""){
@@ -190,7 +203,7 @@ struct SettingsView: View {
 		defaults.setValue(newLoc, forKey: "location")
 	}
 	
-	private func saveSettings(){
+	private func clearExpenses(){
 		
 	}
 	

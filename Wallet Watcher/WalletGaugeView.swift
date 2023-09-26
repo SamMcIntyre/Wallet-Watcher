@@ -28,22 +28,25 @@ struct WalletGaugeView: View {
 	*/
 	
     var body: some View {
-		
-		Gauge(value: wallet.spent, in: 0...wallet.budget) {
-			Text("Wallet")
-		} currentValueLabel: {
-			Text("Spent: $" + String(format:"%.2f", wallet.spent))
-				.font(.title2.monospacedDigit())
-		} minimumValueLabel: {
-			Text("0")
-				.font(.caption2.monospaced())
-		} maximumValueLabel: {
-			Text("$" + String(format:"%.2f", wallet.budget))
-				.font(.caption2.monospaced())
-		}
-		.gaugeStyle(DefaultGaugeStyle())
-		.tint(.green)
-		.onAppear(){
+		HStack{
+			Spacer()
+			Gauge(value: wallet.spent, in: 0...wallet.budget) {
+				Text("Wallet")
+			} currentValueLabel: {
+				Text("Spent: $" + String(format:"%.2f", wallet.spent))
+					.font(.title2.monospacedDigit())
+			} minimumValueLabel: {
+				Text("0")
+					.font(.caption2.monospaced())
+			} maximumValueLabel: {
+				Text("$" + String(format:"%.2f", wallet.budget))
+					.font(.caption2.monospaced())
+			}
+			.gaugeStyle(DefaultGaugeStyle())
+			.tint(.green)
+			.onAppear(){
+			}
+			Spacer()
 		}
     }
 }

@@ -11,8 +11,10 @@ import SwiftData
 
 struct NewExpenseView: View {
 	
+	let defaults = UserDefaults.standard
+	
 	@State private var value = ""
-	@State private var grat = "18" //set to default later
+	@State private var grat = "18" //set to default later (using defaulter() onAppear())
 	@State private var tax = "0" //set to default later
 	@State private var purpose = ""
 	@State private var location = ""
@@ -29,6 +31,11 @@ struct NewExpenseView: View {
 		  numberFormatter = NumberFormatter()
 		  numberFormatter.numberStyle = .currency
 		  numberFormatter.maximumFractionDigits = 2
+	}
+	
+	private func defaulter(){
+		grat = String(defaults.integer(forKey: "gratuity"))
+		tax = String(defaults.integer(forKey: "tax"))
 	}
 	
 	var body: some View {
@@ -101,6 +108,9 @@ struct NewExpenseView: View {
 					}
 				}
 			}
+			.onAppear(perform: {
+				defaulter()
+			})
 		}
     }
 	

@@ -29,6 +29,7 @@ struct ExpenseListView: View {
 								}
 							}
 					}
+					.onDelete(perform: deleteExpense)
 					NavigationLink(destination: FullExpenseListView()){
 						Text("View more").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 					}.tint(.gray)
@@ -36,6 +37,14 @@ struct ExpenseListView: View {
 			}
 		}
     }
+	
+	private func deleteExpense(offsets: IndexSet) {
+		withAnimation {
+			for index in offsets {
+				modelContext.delete(expenses[index])
+			}
+		}
+	}
 }
 
 #Preview {

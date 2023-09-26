@@ -26,8 +26,20 @@ struct FullExpenseListView: View {
 									Text(expense.purpose).font(.caption)
 								}
 							}
-					}
+					}.onDelete(perform: deleteExpense)
 				}.listStyle(.plain)
+			}.toolbar{
+				ToolbarItem(placement: .navigationBarTrailing) {
+					EditButton()
+				}
+			}
+		}
+	}
+	
+	private func deleteExpense(offsets: IndexSet) {
+		withAnimation {
+			for index in offsets {
+				modelContext.delete(expenses[index])
 			}
 		}
 	}

@@ -21,6 +21,8 @@ struct Wallet_WatcherApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+	
+	let loader = DefaultLoader() //loads in the defaults
 
     var body: some Scene {
         WindowGroup {

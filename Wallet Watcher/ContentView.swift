@@ -12,18 +12,25 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     //@Query private var items: [Item]
 	@Query private var expenses: [Expense]
-	@Query private var settings: [Setting]
+	//@Query private var settings: [Setting]
+	
+	let defaults = UserDefaults.standard
 	
 	@State var showingNewExpensePopover = false
-	@State private var path = NavigationPath()
+	//@State private var path = NavigationPath()
+	@State var budget = 150.00 //set to default later in defaulter
 	
 	let tempBudget = 200.00
 	let tempSpent = 50.00
+	
+	private func defaulter(){
+		budget = defaults.double(forKey: "budget")
+	}
 
     var body: some View {
         NavigationStack {
 			VStack{
-				Gauge(value: tempSpent, in: 0...tempBudget) {
+				Gauge(value: tempSpent, in: 0...budget) {
 					Text("Wallet")
 				} currentValueLabel: {
 					Text("Spent: $" + String(format:"%.2f", tempSpent))
@@ -32,7 +39,7 @@ struct ContentView: View {
 					Text("0")
 						.font(.caption2.monospaced())
 				} maximumValueLabel: {
-					Text("$" + String(format:"%.2f", tempBudget))
+					Text("$" + String(format:"%.2f", budget))
 						.font(.caption2.monospaced())
 				}
 				.gaugeStyle(DefaultGaugeStyle())
@@ -109,6 +116,7 @@ struct ContentView: View {
 				}
 			}
 			.onAppear(){
+				defaulter()
 				//if settings.isEmpty{
 					//let newSetting = Setting()
 					//modelContext.insert(newSetting)
@@ -159,5 +167,5 @@ struct ContentView: View {
     ContentView()
         //.modelContainer(for: Item.self, inMemory: true)
 		.modelContainer(for: Expense.self, inMemory: true)
-		.modelContainer(for: Setting.self, inMemory: true)
+		//.modelContainer(for: Setting.self, inMemory: true)
 }

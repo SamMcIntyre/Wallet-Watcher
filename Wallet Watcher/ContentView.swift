@@ -53,7 +53,8 @@ struct ContentView: View {
 					NewExpenseView()
 				})
 				
-				ExpenseListView()
+				ShortExpenseListView()
+				Spacer()
 				/*List {
 					//Button("Add Expense", action: addItem)
 					Button(action: {showingNewExpensePopover = true}) {
@@ -166,6 +167,7 @@ struct ContentView: View {
 #Preview {
     ContentView()
         //.modelContainer(for: Item.self, inMemory: true)
-		.modelContainer(for: Expense.self, inMemory: true)
+		//.modelContainer(for: Expense.self, inMemory: true)
 		//.modelContainer(for: Setting.self, inMemory: true)
+		.modelContainer(for: [Expense.self, QuickExpense.self], inMemory: true)
 }

@@ -18,6 +18,9 @@
 		E52696E52AC2077200413ECA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696E42AC2077200413ECA /* Expense.swift */; };
 		E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE42AC307E1004C949C /* DefaultLoader.swift */; };
 		E58CDDE82AC311D6004C949C /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE62AC311D6004C949C /* Settings.xcdatamodeld */; };
+		E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */; };
+		E58CDDEC2AC32A55004C949C /* ExpenseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */; };
+		E58CDDEE2AC33087004C949C /* QuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDED2AC33087004C949C /* QuickExpense.swift */; };
 		E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */; };
 		E5B9A69D2AC2202800E3CAE8 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */; };
 		E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */; };
@@ -58,6 +61,9 @@
 		E52696E42AC2077200413ECA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		E58CDDE42AC307E1004C949C /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
 		E58CDDE72AC311D6004C949C /* Settings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Settings.xcdatamodel; sourceTree = "<group>"; };
+		E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortExpenseListView.swift; sourceTree = "<group>"; };
+		E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListItemView.swift; sourceTree = "<group>"; };
+		E58CDDED2AC33087004C949C /* QuickExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickExpense.swift; sourceTree = "<group>"; };
 		E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailView.swift; sourceTree = "<group>"; };
@@ -122,7 +128,10 @@
 				E5B9A6A22AC26EE600E3CAE8 /* Setting.swift */,
 				E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */,
 				E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */,
+				E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */,
 				E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */,
+				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
+				E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */,
 				E58CDDE62AC311D6004C949C /* Settings.xcdatamodeld */,
 				E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */,
 				E52696BC2AC1F8CA00413ECA /* Item.swift */,
@@ -293,10 +302,13 @@
 				E5B9A69D2AC2202800E3CAE8 /* ExpenseListView.swift in Sources */,
 				E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */,
 				E52696BD2AC1F8CA00413ECA /* Item.swift in Sources */,
+				E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */,
 				E58CDDE82AC311D6004C949C /* Settings.xcdatamodeld in Sources */,
 				E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */,
 				E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */,
+				E58CDDEC2AC32A55004C949C /* ExpenseListItemView.swift in Sources */,
 				E5B9A6A32AC26EE600E3CAE8 /* Setting.swift in Sources */,
+				E58CDDEE2AC33087004C949C /* QuickExpense.swift in Sources */,
 				E52696B92AC1F8CA00413ECA /* Wallet_WatcherApp.swift in Sources */,
 				E5B9A6A52AC2992500E3CAE8 /* FullExpenseListView.swift in Sources */,
 			);

@@ -183,5 +183,6 @@ struct NewExpenseView: View {
 
 #Preview {
     NewExpenseView()
-	.modelContainer(for: Expense.self, inMemory: true)
+	//.modelContainer(for: Expense.self, inMemory: true)
+		.modelContainer(for: [Expense.self, QuickExpense.self], inMemory: true)
 }

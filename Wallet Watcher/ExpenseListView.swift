@@ -11,31 +11,13 @@ import SwiftData
 struct ExpenseListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
+	//@Query(filter: #Predicate<Expense> {$0.hasChanges})
 	@Query private var expenses: [Expense]
 	
 	@State var showingNewExpensePopover = false
 	
     var body: some View {
-		NavigationStack{
-			GroupBox(label: Text("Recent Expenses").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)) {
-				List{
-					ForEach(expenses) { expense in
-						NavigationLink(
-							destination: ExpenseDetailView(expense: expense)){
-								HStack{
-									Text("-$" + expense.formattedTotal).monospaced()
-									Spacer()
-									Text(expense.purpose).font(.caption)
-								}
-							}
-					}
-					.onDelete(perform: deleteExpense)
-					NavigationLink(destination: FullExpenseListView()){
-						Text("View more").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-					}.tint(.gray)
-				}.listStyle(.plain)
-			}
-		}
+		ShortExpenseListView()
     }
 	
 	private func deleteExpense(offsets: IndexSet) {

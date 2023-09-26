@@ -18,6 +18,7 @@ struct NewExpenseView: View {
 	@State private var tax = "0" //set to default later
 	@State private var purpose = ""
 	@State private var location = ""
+	@State private var makeQuickExpense = false
 	
 	@Environment(\.modelContext) private var context
 	@Environment(\.dismiss) private var dismiss
@@ -57,6 +58,7 @@ struct NewExpenseView: View {
 						Spacer()
 					}
 					HStack{
+						//Submit Button
 						Button("Enter", action: {enterExpense(amountStr:value, gratStr: grat, taxStr: tax, purpose: purpose, location: location)})
 							.font(.title)
 							.buttonStyle(BorderedProminentButtonStyle())
@@ -97,6 +99,37 @@ struct NewExpenseView: View {
 							Text("Tax")
 						}
 						Spacer()
+					}
+					HStack{
+						VStack{
+							//Purpose and Location
+							GroupBox{
+								//Purpose
+								Text("Purpose:").frame(maxWidth: .infinity, alignment: .leading).font(.caption)
+								TextField("drink, food, etc.", text: $purpose).textFieldStyle(RoundedBorderTextFieldStyle())
+									.frame(maxWidth: .infinity, alignment: .leading)
+									.font(.caption)
+							}
+							GroupBox{
+								//Location
+								Text("Location:").frame(maxWidth: .infinity, alignment: .leading).font(.caption)
+								TextField("bar, buffet, etc.", text: $purpose).textFieldStyle(RoundedBorderTextFieldStyle())
+									.frame(maxWidth: .infinity, alignment: .leading)
+									.font(.caption)
+							}
+							Spacer()
+						}.frame(width:180)
+						Spacer()
+						VStack{
+							//Quick Expense toggle
+							GroupBox{
+								HStack {
+									Toggle(isOn: $makeQuickExpense) {Text("Make Quick Expense")}.labelsHidden().frame(maxWidth: .infinity, alignment: .center)
+								}
+								Text("Make Quick Expense").frame(maxWidth: .infinity, alignment: .trailing).font(.caption2)
+							}
+							Spacer()
+						}.frame(width: 120)
 					}
 				}
 			}

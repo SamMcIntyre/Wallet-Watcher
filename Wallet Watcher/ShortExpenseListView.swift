@@ -11,7 +11,8 @@ import SwiftData
 struct ShortExpenseListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
-	@Query private var expenses: [Expense]
+	@Query(sort: \Expense.timestamp, order: .reverse)
+	private var expenses: [Expense]
 	
     var body: some View {
 		NavigationStack{
@@ -43,5 +44,5 @@ struct ShortExpenseListView: View {
 }
 
 #Preview {
-    ShortExpenseListView()
+	ShortExpenseListView()
 }

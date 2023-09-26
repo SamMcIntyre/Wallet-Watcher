@@ -11,7 +11,8 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     //@Query private var items: [Item]
-	@Query private var expenses: [Expense]
+	@Query(sort: \Expense.timestamp, order: .reverse)
+	private var expenses: [Expense]
 	//@Query private var settings: [Setting]
 	
 	let defaults = UserDefaults.standard
@@ -30,7 +31,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
 			VStack{
-				Gauge(value: tempSpent, in: 0...budget) {
+				WalletGaugeView()
+				/*Gauge(value: tempSpent, in: 0...budget) {
 					Text("Wallet")
 				} currentValueLabel: {
 					Text("Spent: $" + String(format:"%.2f", tempSpent))
@@ -44,6 +46,7 @@ struct ContentView: View {
 				}
 				.gaugeStyle(DefaultGaugeStyle())
 				.tint(.green)
+				 */
 				
 				Button(action: {showingNewExpensePopover = true}) {
 					Label("Add Expense", systemImage: "plus");
@@ -52,7 +55,7 @@ struct ContentView: View {
 				.popover(isPresented: $showingNewExpensePopover, content: {
 					NewExpenseView()
 				})
-				
+				ShortQuickListView()
 				ShortExpenseListView()
 				Spacer()
 				/*List {

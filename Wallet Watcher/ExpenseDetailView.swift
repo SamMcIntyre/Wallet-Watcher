@@ -21,6 +21,14 @@ struct ExpenseDetailView: View {
 					Text("$" + expense.formattedPrice)
 				}
 				HStack{
+					Text("Gratuity: ")
+					Text(String(Int(expense.gratuity * 100)) + "%")
+				}
+				HStack{
+					Text("Tax: ")
+					Text(String(Int(expense.tax * 100)) + "%")
+				}
+				HStack{
 					Text("Date: ")
 					Text(expense.timestamp, format: Date.FormatStyle(date: .abbreviated))
 				}

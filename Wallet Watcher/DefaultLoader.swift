@@ -28,8 +28,8 @@ class DefaultLoader{
 			defaults.set(true, forKey: "First Launch")
 			
 			//fill in some basic defaults
-			defaults.setValue(19, forKey: "gratuity")
-			defaults.setValue(6, forKey: "tax")
+			defaults.setValue(0.19, forKey: "gratuity")
+			defaults.setValue(0.06, forKey: "tax")
 			defaults.setValue(250.00, forKey: "budget")
 		}
 	}

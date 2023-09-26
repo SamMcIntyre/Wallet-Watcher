@@ -18,6 +18,7 @@ struct NewExpenseView: View {
 	@State private var tax = "0" //set to default later
 	@State private var purpose = ""
 	@State private var location = ""
+	@State private var makeQuickExpense = false
 	
 	@Environment(\.modelContext) private var context
 	@Environment(\.dismiss) private var dismiss
@@ -34,8 +35,8 @@ struct NewExpenseView: View {
 	}
 	
 	private func defaulter(){
-		grat = String(defaults.integer(forKey: "gratuity"))
-		tax = String(defaults.integer(forKey: "tax"))
+		grat = String(Int(defaults.double(forKey: "gratuity")*100))
+		tax = String(Int(defaults.double(forKey: "tax")*100))
 	}
 	
 	var body: some View {
@@ -50,13 +51,14 @@ struct NewExpenseView: View {
 							.keyboardType(.decimalPad)
 							.textFieldStyle(RoundedBorderTextFieldStyle())
 							.frame(width: 200)
-							.font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/.monospaced())
+							.font(.title.monospaced())
 							.onSubmit() {
 								enterExpense(amountStr:value, gratStr: grat, taxStr: tax, purpose: purpose, location: location)
 							}
 						Spacer()
 					}
 					HStack{
+						//Submit Button
 						Button("Enter", action: {enterExpense(amountStr:value, gratStr: grat, taxStr: tax, purpose: purpose, location: location)})
 							.font(.title)
 							.buttonStyle(BorderedProminentButtonStyle())
@@ -91,12 +93,44 @@ struct NewExpenseView: View {
 									})
 									.frame(minWidth: 20, idealWidth: 50, maxWidth: 50)
 									.textFieldStyle(RoundedBorderTextFieldStyle())
+									.keyboardType(.numberPad)
 								Text("%")
 								Spacer()
 							}
 							Text("Tax")
 						}
 						Spacer()
+					}
+					HStack{
+						VStack{
+							//Purpose and Location
+							GroupBox{
+								//Purpose
+								Text("Purpose:").frame(maxWidth: .infinity, alignment: .leading).font(.caption)
+								TextField("drink, food, etc.", text: $purpose).textFieldStyle(RoundedBorderTextFieldStyle())
+									.frame(maxWidth: .infinity, alignment: .leading)
+									.font(.caption)
+							}
+							GroupBox{
+								//Location
+								Text("Location:").frame(maxWidth: .infinity, alignment: .leading).font(.caption)
+								TextField("bar, buffet, etc.", text: $location).textFieldStyle(RoundedBorderTextFieldStyle())
+									.frame(maxWidth: .infinity, alignment: .leading)
+									.font(.caption)
+							}
+							Spacer()
+						}.frame(width:180)
+						Spacer()
+						VStack{
+							//Quick Expense toggle
+							GroupBox{
+								HStack {
+									Toggle(isOn: $makeQuickExpense) {Text("Make Quick Expense")}.labelsHidden().frame(maxWidth: .infinity, alignment: .center)
+								}
+								Text("Make Quick Expense").frame(maxWidth: .infinity, alignment: .trailing).font(.caption2)
+							}
+							Spacer()
+						}.frame(width: 120)
 					}
 				}
 			}
@@ -131,7 +165,12 @@ struct NewExpenseView: View {
 		}
 		//gratuity
 		if (gratStr != ""){
-			let dirtyGrStr = ("0." + gratStr) // build a proper float percent
+			var dirtyGrStr:String
+			if(gratStr.count == 1){ //check if need to add the tenths place
+				dirtyGrStr = ("0.0" + gratStr) // add tenths place, build a proper float percent
+			}else{
+				dirtyGrStr = ("0." + gratStr) // build a proper float percent
+			}
 			guard let grat = Double(dirtyGrStr) else { return }
 			let cleanGrStr = String(format: "%.2f", grat)
 			cleanGrat = Double(cleanGrStr) ?? 0.0
@@ -140,7 +179,12 @@ struct NewExpenseView: View {
 		}
 		//tax
 		if (taxStr != ""){
-			let dirtyTaStr = ("0." + taxStr) // build a proper float percent
+			var dirtyTaStr:String
+			if(taxStr.count == 1){ //check if need to add the tenths place
+				dirtyTaStr = ("0.0" + taxStr) // add tenths place, build a proper float percent
+			}else{
+				dirtyTaStr = ("0." + taxStr) // build a proper float percent
+			}
 			guard let tax = Double(dirtyTaStr) else { return }
 			let cleanTaStr = String(format: "%.2f", tax)
 			cleanTax = Double(cleanTaStr) ?? 0.0
@@ -161,6 +205,10 @@ struct NewExpenseView: View {
 		}
 		
 		let newExpense = Expense(price: cleanAmount, grat: cleanGrat, tax: cleanTax, purpose: cleanPurpose, location: cleanLocation)
+		if(makeQuickExpense){
+			let newQuickExpense = QuickExpense(price: cleanAmount, grat: cleanGrat, tax: cleanTax, purpose: cleanPurpose, location: cleanLocation)
+			context.insert(newQuickExpense)
+		}
 		context.insert(newExpense)
 		do {
 			try context.save()

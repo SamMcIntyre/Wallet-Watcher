@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Expense{
+class Expense{
 	var price: Double
 	var formattedPrice: String
 	var tax: Double

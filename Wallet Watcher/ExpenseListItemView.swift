@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExpenseListItemView: View {
-	let expense:Expense
+	let expense: Expense
 	
     var body: some View {
 		NavigationLink(

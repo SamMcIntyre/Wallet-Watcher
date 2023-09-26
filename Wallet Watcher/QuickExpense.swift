@@ -10,13 +10,31 @@ import SwiftData
 
 @Model
 final class QuickExpense{
-	var expense:Expense
+	var price: Double
+	var formattedPrice: String
+	var tax: Double
+	var gratuity: Double
+	var total: Double
+	var formattedTotal: String
+	var timestamp: Date
+	var purpose: String
+	var location: String
 	
-	init(expense: Expense){
-		self.expense = expense
+	init(price: Double, grat: Double, tax: Double, purpose: String, location: String){
+		self.price = price
+		self.tax = tax
+		self.gratuity = grat
+		let totalPrice = price + (price*grat) + (price*tax)
+		self.total = totalPrice
+		self.formattedPrice = String(format: "%.2f", price)
+		self.formattedTotal = String(format: "%.2f", totalPrice)
+		self.timestamp = Date()
+		self.purpose = purpose
+		self.location = location
 	}
 	
-	init(){
-		self.expense = Expense(price: 0.00)
+	func returnNewExpense() -> Expense{
+		let newExpense = Expense(price: price, grat: gratuity, tax: tax, purpose: purpose, location: location)
+		return newExpense
 	}
 }

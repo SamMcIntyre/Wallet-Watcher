@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Defines the detail page for an Expense, it displays all of the details of an Expense
 struct ExpenseDetailView: View {
 	let expense: Expense
 	

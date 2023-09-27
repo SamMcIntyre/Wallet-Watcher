@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+//defines A Quick Expense Item, which are used to build Quick Expense Lists
 struct QuickListItemView: View {
 	let quickExpense: QuickExpense
 	
@@ -40,6 +41,7 @@ struct QuickListItemView: View {
 
 	}
 	
+	//enter a new expense quickly
 	private func quickEnterExpense(newExpense: Expense){
 		//enter new expense
 		modelContext.insert(newExpense)

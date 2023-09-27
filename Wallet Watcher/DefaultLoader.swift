@@ -7,12 +7,10 @@
 
 import Foundation
 
+//defines a default loader, which simply loads in defaults, especially if there is no data in the system yet.
 class DefaultLoader{
-	//let defaults = UserDefaults.standard
 	
-	init(){
-		//let defaults = UserDefaults.standard
-		
+	init(){		
 		runOnLoad()
 	}
 	
@@ -20,7 +18,7 @@ class DefaultLoader{
 		let defaults = UserDefaults.standard
 		
 		//checking for first ever load
-		if defaults.bool(forKey: "-First Launch") == true{
+		if defaults.bool(forKey: "First Launch") == true{
 			//second+ time
 			defaults.set(true, forKey: "First Launch")
 		} else {

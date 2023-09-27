@@ -9,23 +9,14 @@ import SwiftUI
 import SwiftData
 
 struct WalletGaugeView: View {
-	@Environment(\.modelContext) private var modelContext
-	
-	//@Query private var wallet: [Wallet]
 	let wallet :Wallet
+	
+	@Environment(\.modelContext) private var modelContext
 
 	@Query(sort: \Expense.timestamp, order: .reverse)
 	private var expenses: [Expense]
 	
-	//@State var budget = 150.00 //set to default later in defaulter
-	//@State var spent = 0.00
-	
 	let defaults = UserDefaults.standard
-	/*
-	private func defaulter(){
-		budget = defaults.double(forKey: "budget")
-	}
-	*/
 	
     var body: some View {
 		HStack{

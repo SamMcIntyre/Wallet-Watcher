@@ -26,6 +26,9 @@ struct ContentView: View {
         NavigationStack {
 			ScrollView{
 				VStack{
+					//title
+					Text("Wallet Watcher").font(.title).padding(.leastNonzeroMagnitude)
+					
 					//Display wallet gauge
 					ForEach(wallets) { wallet in
 						WalletGaugeView(wallet: wallet)

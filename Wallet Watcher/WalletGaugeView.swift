@@ -22,7 +22,11 @@ struct WalletGaugeView: View {
 		HStack{
 			Spacer()
 			Gauge(value: wallet.spent, in: 0...wallet.budget) {
-				Text("Wallet")
+				Image("WalletWatcher_logo")
+					.resizable(resizingMode: .stretch)
+					.aspectRatio(contentMode: .fill)
+					.frame(width: 50, height: 50
+					)
 			} currentValueLabel: {
 				Text("Spent: $" + String(format:"%.2f", wallet.spent))
 					.font(.title2.monospacedDigit())

@@ -15,6 +15,7 @@
 		E52696D62AC1F8CB00413ECA /* Wallet_WatcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696D52AC1F8CB00413ECA /* Wallet_WatcherUITests.swift */; };
 		E52696D82AC1F8CB00413ECA /* Wallet_WatcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696D72AC1F8CB00413ECA /* Wallet_WatcherUITestsLaunchTests.swift */; };
 		E52696E52AC2077200413ECA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696E42AC2077200413ECA /* Expense.swift */; };
+		E567F9DC2AC3EC1E0046A47F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E567F9DB2AC3EC1E0046A47F /* LaunchScreen.storyboard */; };
 		E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE42AC307E1004C949C /* DefaultLoader.swift */; };
 		E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */; };
 		E58CDDEC2AC32A55004C949C /* ExpenseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */; };
@@ -60,6 +61,7 @@
 		E52696D52AC1F8CB00413ECA /* Wallet_WatcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_WatcherUITests.swift; sourceTree = "<group>"; };
 		E52696D72AC1F8CB00413ECA /* Wallet_WatcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_WatcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E52696E42AC2077200413ECA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		E567F9DB2AC3EC1E0046A47F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E58CDDE42AC307E1004C949C /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
 		E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortExpenseListView.swift; sourceTree = "<group>"; };
 		E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListItemView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */,
 				E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */,
 				E58CDDF32AC34ED3004C949C /* FullQuickListView.swift */,
+				E567F9DB2AC3EC1E0046A47F /* LaunchScreen.storyboard */,
 				E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */,
 				E58CDDEF2AC3436D004C949C /* ShortQuickListView.swift */,
 				E58CDDF72AC36727004C949C /* Wallet.swift */,
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E567F9DC2AC3EC1E0046A47F /* LaunchScreen.storyboard in Resources */,
 				E52696C22AC1F8CB00413ECA /* Preview Assets.xcassets in Resources */,
 				E52696BF2AC1F8CB00413ECA /* Assets.xcassets in Resources */,
 			);
@@ -485,11 +489,13 @@
 				DEVELOPMENT_TEAM = WYX8JDTD8K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wallet-Watcher-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Wallet Watcher";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -517,11 +523,13 @@
 				DEVELOPMENT_TEAM = WYX8JDTD8K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wallet-Watcher-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Wallet Watcher";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

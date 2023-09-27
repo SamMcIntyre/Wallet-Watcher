@@ -11,7 +11,7 @@
 		<key>UIImageName</key>
 		<string>ww_SplashLogo</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
-		<false/>
+		<true/>
 	</dict>
 </dict>
 </plist>

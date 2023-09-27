@@ -131,6 +131,8 @@ struct SettingsView: View {
 				Divider()
 				
 				HStack{
+					Spacer()
+					
 					//RESET
 					Button("Clear Expenses", action: {isShowingDialog = true})
 						.font(.headline)
@@ -143,6 +145,10 @@ struct SettingsView: View {
 						} message: {
 							Text("You cannot undo this action.")
 						}
+					
+					Spacer()
+					
+					//TUTORIAL
 					Button(action: {isShowingTutorialPopover = true}) {
 						Text("How to Use");
 					}
@@ -151,6 +157,8 @@ struct SettingsView: View {
 					.popover(isPresented: $isShowingTutorialPopover, content: {
 						TutorialView()
 					})
+					
+					Spacer()
 				}.padding(.top)
 			}
 		}

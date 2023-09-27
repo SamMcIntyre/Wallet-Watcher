@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Defines the items which make up the Expense Lists
 struct ExpenseListItemView: View {
 	let expense: Expense
 	

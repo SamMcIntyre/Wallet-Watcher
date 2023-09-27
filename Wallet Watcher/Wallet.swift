@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+// Defines a wallet, which keeps track of the budget and how much has been spent
 @Model
 final class Wallet{
 	var spent: Double

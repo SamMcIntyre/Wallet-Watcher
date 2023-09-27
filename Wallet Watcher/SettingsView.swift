@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import Combine
 
+//defines the Settings menu, which provides plenty of backend options.
 struct SettingsView: View {
 	@Environment(\.modelContext) private var modelContext
 	@Environment(\.dismiss) private var dismiss
@@ -49,8 +50,8 @@ struct SettingsView: View {
 							updateBudget(newBudget: Double(value) ?? -1.0)
 						}
 					//Submit Button
-					Button("Enter", action: {updateBudget(newBudget: Double(value) ?? -1.0)})
-						.font(.title)
+					Button("Update", action: {updateBudget(newBudget: Double(value) ?? -1.0)})
+						.font(.title2)
 						.buttonStyle(BorderedProminentButtonStyle())
 				}
 				
@@ -240,6 +241,7 @@ struct SettingsView: View {
 	}
 }
 
+//an extension which allows me to delete all of a certain item in the model.
 extension ModelContext {
 	func deleteAll<T>(model: T.Type) where T : PersistentModel {
 		do {

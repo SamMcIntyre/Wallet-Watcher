@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E52696B92AC1F8CA00413ECA /* Wallet_WatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696B82AC1F8CA00413ECA /* Wallet_WatcherApp.swift */; };
 		E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696BA2AC1F8CA00413ECA /* ContentView.swift */; };
-		E52696BD2AC1F8CA00413ECA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696BC2AC1F8CA00413ECA /* Item.swift */; };
 		E52696BF2AC1F8CB00413ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52696BE2AC1F8CB00413ECA /* Assets.xcassets */; };
 		E52696C22AC1F8CB00413ECA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52696C12AC1F8CB00413ECA /* Preview Assets.xcassets */; };
 		E52696CC2AC1F8CB00413ECA /* Wallet_WatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696CB2AC1F8CB00413ECA /* Wallet_WatcherTests.swift */; };
@@ -17,7 +16,6 @@
 		E52696D82AC1F8CB00413ECA /* Wallet_WatcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696D72AC1F8CB00413ECA /* Wallet_WatcherUITestsLaunchTests.swift */; };
 		E52696E52AC2077200413ECA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696E42AC2077200413ECA /* Expense.swift */; };
 		E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE42AC307E1004C949C /* DefaultLoader.swift */; };
-		E58CDDE82AC311D6004C949C /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE62AC311D6004C949C /* Settings.xcdatamodeld */; };
 		E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */; };
 		E58CDDEC2AC32A55004C949C /* ExpenseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */; };
 		E58CDDEE2AC33087004C949C /* QuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDED2AC33087004C949C /* QuickExpense.swift */; };
@@ -28,9 +26,7 @@
 		E58CDDF82AC36727004C949C /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF72AC36727004C949C /* Wallet.swift */; };
 		E58CDDFA2AC39D08004C949C /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF92AC39D08004C949C /* TutorialView.swift */; };
 		E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */; };
-		E5B9A69D2AC2202800E3CAE8 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */; };
 		E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */; };
-		E5B9A6A32AC26EE600E3CAE8 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A22AC26EE600E3CAE8 /* Setting.swift */; };
 		E5B9A6A52AC2992500E3CAE8 /* FullExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */; };
 		E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +52,6 @@
 		E52696B52AC1F8CA00413ECA /* Wallet Watcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wallet Watcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52696B82AC1F8CA00413ECA /* Wallet_WatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_WatcherApp.swift; sourceTree = "<group>"; };
 		E52696BA2AC1F8CA00413ECA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E52696BC2AC1F8CA00413ECA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E52696BE2AC1F8CB00413ECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E52696C12AC1F8CB00413ECA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E52696C72AC1F8CB00413ECA /* Wallet WatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wallet WatcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +61,6 @@
 		E52696D72AC1F8CB00413ECA /* Wallet_WatcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet_WatcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E52696E42AC2077200413ECA /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		E58CDDE42AC307E1004C949C /* DefaultLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoader.swift; sourceTree = "<group>"; };
-		E58CDDE72AC311D6004C949C /* Settings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Settings.xcdatamodel; sourceTree = "<group>"; };
 		E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortExpenseListView.swift; sourceTree = "<group>"; };
 		E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListItemView.swift; sourceTree = "<group>"; };
 		E58CDDED2AC33087004C949C /* QuickExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickExpense.swift; sourceTree = "<group>"; };
@@ -77,9 +71,7 @@
 		E58CDDF72AC36727004C949C /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		E58CDDF92AC39D08004C949C /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
-		E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailView.swift; sourceTree = "<group>"; };
-		E5B9A6A22AC26EE600E3CAE8 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullExpenseListView.swift; sourceTree = "<group>"; };
 		E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +129,6 @@
 				E52696E42AC2077200413ECA /* Expense.swift */,
 				E58CDDE42AC307E1004C949C /* DefaultLoader.swift */,
 				E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */,
-				E5B9A6A22AC26EE600E3CAE8 /* Setting.swift */,
-				E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */,
 				E58CDDF12AC344BE004C949C /* QuickListItemView.swift */,
 				E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */,
 				E58CDDE92AC32736004C949C /* ShortExpenseListView.swift */,
@@ -150,9 +140,7 @@
 				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
 				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
 				E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */,
-				E58CDDE62AC311D6004C949C /* Settings.xcdatamodeld */,
 				E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */,
-				E52696BC2AC1F8CA00413ECA /* Item.swift */,
 				E52696BE2AC1F8CB00413ECA /* Assets.xcassets */,
 				E52696C02AC1F8CB00413ECA /* Preview Content */,
 			);
@@ -319,18 +307,14 @@
 				E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */,
 				E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */,
 				E58CDDF42AC34ED3004C949C /* FullQuickListView.swift in Sources */,
-				E5B9A69D2AC2202800E3CAE8 /* ExpenseListView.swift in Sources */,
 				E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */,
-				E52696BD2AC1F8CA00413ECA /* Item.swift in Sources */,
 				E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */,
-				E58CDDE82AC311D6004C949C /* Settings.xcdatamodeld in Sources */,
 				E58CDDF02AC3436D004C949C /* ShortQuickListView.swift in Sources */,
 				E58CDDF22AC344BE004C949C /* QuickListItemView.swift in Sources */,
 				E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */,
 				E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */,
 				E58CDDFA2AC39D08004C949C /* TutorialView.swift in Sources */,
 				E58CDDEC2AC32A55004C949C /* ExpenseListItemView.swift in Sources */,
-				E5B9A6A32AC26EE600E3CAE8 /* Setting.swift in Sources */,
 				E58CDDF62AC35E6A004C949C /* WalletGaugeView.swift in Sources */,
 				E58CDDEE2AC33087004C949C /* QuickExpense.swift in Sources */,
 				E52696B92AC1F8CA00413ECA /* Wallet_WatcherApp.swift in Sources */,
@@ -670,19 +654,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E58CDDE62AC311D6004C949C /* Settings.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E58CDDE72AC311D6004C949C /* Settings.xcdatamodel */,
-			);
-			currentVersion = E58CDDE72AC311D6004C949C /* Settings.xcdatamodel */;
-			path = Settings.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E52696AD2AC1F8CA00413ECA /* Project object */;
 }

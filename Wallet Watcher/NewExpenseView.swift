@@ -9,7 +9,11 @@ import SwiftUI
 import Combine
 import SwiftData
 
+//Defines the New Expense View, which allows you to make a new expense
 struct NewExpenseView: View {
+	
+	@Environment(\.modelContext) private var modelContext
+	@Environment(\.dismiss) private var dismiss
 	
 	let defaults = UserDefaults.standard
 	
@@ -20,27 +24,10 @@ struct NewExpenseView: View {
 	@State private var location = "" // set to default later
 	@State private var makeQuickExpense = false
 	
-	@Environment(\.modelContext) private var modelContext
-	@Environment(\.dismiss) private var dismiss
-	
 	@Query private var wallet: [Wallet]
 	@Query private var expenses: [Expense]
 	
 	let gratTaxLimit = 2 //digit limit for gratuity and text box
-	
-	private let numberFormatter: NumberFormatter
-	init() {
-		  numberFormatter = NumberFormatter()
-		  numberFormatter.numberStyle = .currency
-		  numberFormatter.maximumFractionDigits = 2
-	}
-	
-	private func defaulter(){
-		grat = String(Int(defaults.double(forKey: "gratuity")*100))
-		tax = String(Int(defaults.double(forKey: "tax")*100))
-		purpose = defaults.string(forKey: "purpose") ?? ""
-		location = defaults.string(forKey: "location") ?? ""
-	}
 	
 	var body: some View {
 		NavigationView{
@@ -151,6 +138,15 @@ struct NewExpenseView: View {
 		}
     }
 	
+	//set some default values
+	private func defaulter(){
+		grat = String(Int(defaults.double(forKey: "gratuity")*100))
+		tax = String(Int(defaults.double(forKey: "tax")*100))
+		purpose = defaults.string(forKey: "purpose") ?? ""
+		location = defaults.string(forKey: "location") ?? ""
+	}
+	
+	//enter a new expense into the SwiftData model. Also clean the data while doing that
 	private func enterExpense(amountStr: String, gratStr: String, taxStr: String, purpose: String, location: String) {
 		// clean and format incoming inputs:
 		var cleanAmount = 0.0
@@ -244,6 +240,5 @@ struct NewExpenseView: View {
 
 #Preview {
     NewExpenseView()
-	//.modelContainer(for: Expense.self, inMemory: true)
 		.modelContainer(for: [Expense.self, QuickExpense.self], inMemory: true)
 }

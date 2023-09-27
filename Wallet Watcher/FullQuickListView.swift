@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+// defines the comprehensive list of Quick Expenses
 struct FullQuickListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
@@ -16,7 +17,7 @@ struct FullQuickListView: View {
 	
     var body: some View {
 		NavigationStack{
-				GroupBox(label: Text("Quick Expenses").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)) {
+				GroupBox(label: Text("Quick Expenses").frame(maxWidth: .infinity, alignment: .center)) {
 					List{
 						ForEach(quickExpenses) { quickExpense in
 							//if(expense.)
@@ -34,6 +35,7 @@ struct FullQuickListView: View {
 			}
     }
 	
+	//delete a quick expense from the list
 	private func deleteQuickExpense(offsets: IndexSet) {
 		withAnimation {
 			for index in offsets {

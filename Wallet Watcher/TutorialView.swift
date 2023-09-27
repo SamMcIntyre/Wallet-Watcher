@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//defines the tutorial, which explains to users how to properly operate the app.
 struct TutorialView: View {
 	@Environment(\.dismiss) private var dismiss
 	

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+//Defines an expense, which is the most basic piece of data in the system. Objects of this type build up the app.
 @Model
 class Expense{
 	var price: Double
@@ -34,6 +35,7 @@ class Expense{
 	}
 	
 	init(price: Double) {
+		//for a quick init for testing purposes
 		let tax = 0.0
 		let grat = 0.18
 		let totalPrice = price + (price*grat) + (price*tax)
@@ -47,37 +49,5 @@ class Expense{
 		self.timestamp = Date()
 		self.purpose = "default purpose."
 		self.location = "default location."
-	}
-	
-	init(price: Double, purpose: String) {
-		let tax = 0.0
-		let grat = 0.18
-		let totalPrice = price + (price*grat) + (price*tax)
-		
-		self.price = price
-		self.tax = tax
-		self.gratuity = grat
-		self.total = totalPrice
-		self.formattedPrice = String(format: "%.2f", price)
-		self.formattedTotal = String(format: "%.2f", totalPrice)
-		self.timestamp = Date()
-		self.purpose = purpose
-		self.location = "default location."
-	}
-	
-	init(price: Double, purpose: String, location: String) {
-		let tax = 0.0
-		let grat = 0.18
-		let totalPrice = price + (price*grat) + (price*tax)
-		
-		self.price = price
-		self.tax = tax
-		self.gratuity = grat
-		self.total = totalPrice
-		self.formattedPrice = String(format: "%.2f", price)
-		self.formattedTotal = String(format: "%.2f", totalPrice)
-		self.timestamp = Date()
-		self.purpose = purpose
-		self.location = location
 	}
 }

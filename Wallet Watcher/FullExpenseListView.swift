@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+//defines the comprehensive List of Expenses
 struct FullExpenseListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
@@ -31,6 +32,7 @@ struct FullExpenseListView: View {
 		}
 	}
 	
+	//delete an expense
 	private func deleteExpense(offsets: IndexSet) {
 		withAnimation {
 			for index in offsets {

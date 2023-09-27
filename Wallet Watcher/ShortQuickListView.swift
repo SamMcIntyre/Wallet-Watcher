@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+//defines a short list of the most recently created Quick Expenses for use on the dashboard.
 struct ShortQuickListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
@@ -33,6 +34,7 @@ struct ShortQuickListView: View {
 				}
     }
 	
+	//delete a quick expense from the list
 	private func deleteQuickExpense(offsets: IndexSet) {
 		withAnimation {
 			for index in offsets {

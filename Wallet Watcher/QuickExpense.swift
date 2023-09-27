@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+//defines a quick expense, which allows users to re-add an Expense very quickly
 @Model
 final class QuickExpense{
 	var price: Double
@@ -33,6 +34,7 @@ final class QuickExpense{
 		self.location = location
 	}
 	
+	//function to return its saved expense as a brand new Expense object
 	func returnNewExpense() -> Expense{
 		let newExpense = Expense(price: price, grat: gratuity, tax: tax, purpose: purpose, location: location)
 		return newExpense

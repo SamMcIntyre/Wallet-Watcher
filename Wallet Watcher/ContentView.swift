@@ -10,7 +10,10 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+	@Environment(\.dismiss) private var dismiss
+	
     //@Query private var items: [Item]
+	@Query private var wallets: [Wallet]
 	@Query(sort: \Expense.timestamp, order: .reverse)
 	private var expenses: [Expense]
 	//@Query private var settings: [Setting]
@@ -21,17 +24,32 @@ struct ContentView: View {
 	//@State private var path = NavigationPath()
 	@State var budget = 150.00 //set to default later in defaulter
 	
-	let tempBudget = 200.00
-	let tempSpent = 50.00
+	//let tempBudget = 200.00
+	//let tempSpent = 50.00
 	
 	private func defaulter(){
 		budget = defaults.double(forKey: "budget")
+		
+		if(wallets.count == 0){
+			//initialize a wallet
+			let newWallet = Wallet(spent: 0.00, budget: budget)
+			modelContext.insert(newWallet)
+			do {
+				try modelContext.save()
+			} catch {
+				print(error.localizedDescription)
+			}
+			dismiss()
+		}
 	}
 
     var body: some View {
         NavigationStack {
 			VStack{
-				WalletGaugeView()
+				ForEach(wallets) { wallet in
+					WalletGaugeView(wallet: wallet)
+				}
+				//WalletGaugeView(wallet: wallet)
 				/*Gauge(value: tempSpent, in: 0...budget) {
 					Text("Wallet")
 				} currentValueLabel: {
@@ -172,5 +190,5 @@ struct ContentView: View {
         //.modelContainer(for: Item.self, inMemory: true)
 		//.modelContainer(for: Expense.self, inMemory: true)
 		//.modelContainer(for: Setting.self, inMemory: true)
-		.modelContainer(for: [Expense.self, QuickExpense.self], inMemory: true)
+		.modelContainer(for: [Expense.self, QuickExpense.self, Wallet.self], inMemory: true)
 }

@@ -12,6 +12,7 @@ struct ExpenseListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
 	//@Query(filter: #Predicate<Expense> {$0.hasChanges})
+	@Query private var wallets: [Wallet]
 	@Query private var expenses: [Expense]
 	
 	@State var showingNewExpensePopover = false
@@ -23,6 +24,7 @@ struct ExpenseListView: View {
 	private func deleteExpense(offsets: IndexSet) {
 		withAnimation {
 			for index in offsets {
+				wallets[0].spent -= expenses[index].total
 				modelContext.delete(expenses[index])
 			}
 		}

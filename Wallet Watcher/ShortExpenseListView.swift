@@ -11,6 +11,7 @@ import SwiftData
 struct ShortExpenseListView: View {
 	@Environment(\.modelContext) private var modelContext
 	
+	@Query private var wallets: [Wallet]
 	@Query(sort: \Expense.timestamp, order: .reverse)
 	private var expenses: [Expense]
 	
@@ -37,6 +38,7 @@ struct ShortExpenseListView: View {
 	private func deleteExpense(offsets: IndexSet) {
 		withAnimation {
 			for index in offsets {
+				wallets[0].spent -= expenses[index].total
 				modelContext.delete(expenses[index])
 			}
 		}

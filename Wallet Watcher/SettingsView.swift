@@ -24,6 +24,7 @@ struct SettingsView: View {
 	@State private var location = ""
 	
 	@State private var isShowingDialog = false
+	@State private var isShowingTutorialPopover = false
 	
 	let defaults = UserDefaults.standard
 	
@@ -128,19 +129,28 @@ struct SettingsView: View {
 				Spacer()
 				Divider()
 				
-				//RESET
-				Button("Clear Expenses", action: {isShowingDialog = true})
-					.font(.headline)
-					.buttonStyle(.borderedProminent)
-					.tint(.red)
-					.padding(.top)
-					.confirmationDialog("Are you sure you want to clear all expenses?", isPresented: $isShowingDialog) {
-						Button("Clear All", role: .destructive) {
-										clearExpenses()
-									}
-								} message: {
-									Text("You cannot undo this action.")
+				HStack{
+					//RESET
+					Button("Clear Expenses", action: {isShowingDialog = true})
+						.font(.headline)
+						.buttonStyle(.borderedProminent)
+						.tint(.red)
+						.confirmationDialog("Are you sure you want to clear all expenses?", isPresented: $isShowingDialog) {
+							Button("Clear All", role: .destructive) {
+								clearExpenses()
 							}
+						} message: {
+							Text("You cannot undo this action.")
+						}
+					Button(action: {isShowingTutorialPopover = true}) {
+						Text("How to Use");
+					}
+					.tint(Color.green)
+					.buttonStyle(.borderedProminent)
+					.popover(isPresented: $isShowingTutorialPopover, content: {
+						TutorialView()
+					})
+				}.padding(.top)
 			}
 		}
 		.onAppear(){
@@ -204,7 +214,11 @@ struct SettingsView: View {
 	}
 	
 	private func clearExpenses(){
+		//clear expenses
+		modelContext.deleteAll(model: Expense.self)
 		
+		//clear wallet
+		wallets[0].spent = 0.0
 	}
 	
 	//function to pull the user defaults
@@ -222,6 +236,18 @@ struct SettingsView: View {
 		}
 		if tax.count > upper {
 			tax = String(tax.prefix(upper))
+		}
+	}
+}
+
+extension ModelContext {
+	func deleteAll<T>(model: T.Type) where T : PersistentModel {
+		do {
+			let p = #Predicate<T> { _ in true }
+			try self.delete(model: T.self, where: p, includeSubclasses: false)
+			print("All of \(model.self) cleared !")
+		} catch {
+			print("error: \(error)")
 		}
 	}
 }

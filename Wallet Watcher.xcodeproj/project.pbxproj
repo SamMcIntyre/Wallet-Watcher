@@ -26,6 +26,7 @@
 		E58CDDF42AC34ED3004C949C /* FullQuickListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF32AC34ED3004C949C /* FullQuickListView.swift */; };
 		E58CDDF62AC35E6A004C949C /* WalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */; };
 		E58CDDF82AC36727004C949C /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF72AC36727004C949C /* Wallet.swift */; };
+		E58CDDFA2AC39D08004C949C /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF92AC39D08004C949C /* TutorialView.swift */; };
 		E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */; };
 		E5B9A69D2AC2202800E3CAE8 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */; };
 		E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */; };
@@ -74,6 +75,7 @@
 		E58CDDF32AC34ED3004C949C /* FullQuickListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuickListView.swift; sourceTree = "<group>"; };
 		E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletGaugeView.swift; sourceTree = "<group>"; };
 		E58CDDF72AC36727004C949C /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		E58CDDF92AC39D08004C949C /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		E5B9A69C2AC2202800E3CAE8 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */,
 				E58CDDEF2AC3436D004C949C /* ShortQuickListView.swift */,
 				E58CDDF72AC36727004C949C /* Wallet.swift */,
+				E58CDDF92AC39D08004C949C /* TutorialView.swift */,
 				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
 				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
 				E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */,
@@ -325,6 +328,7 @@
 				E58CDDF22AC344BE004C949C /* QuickListItemView.swift in Sources */,
 				E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */,
 				E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */,
+				E58CDDFA2AC39D08004C949C /* TutorialView.swift in Sources */,
 				E58CDDEC2AC32A55004C949C /* ExpenseListItemView.swift in Sources */,
 				E5B9A6A32AC26EE600E3CAE8 /* Setting.swift in Sources */,
 				E58CDDF62AC35E6A004C949C /* WalletGaugeView.swift in Sources */,

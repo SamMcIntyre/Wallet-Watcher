@@ -25,7 +25,6 @@ struct ShortQuickListView: View {
 							.onDelete(perform: deleteQuickExpense)
 						}
 						.listStyle(.plain)
-						.scrollDisabled(true)
 						.frame(height: 190)
 						NavigationLink(destination: FullQuickListView()){
 							Text("View all").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

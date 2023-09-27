@@ -20,14 +20,7 @@ struct FullExpenseListView: View {
 			GroupBox(label: Text("All Expenses").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)) {
 				List{
 					ForEach(expenses) { expense in
-						NavigationLink(
-							destination: ExpenseDetailView(expense: expense)){
-								HStack{
-									Text("-$" + expense.formattedTotal).monospaced()
-									Spacer()
-									Text(expense.purpose).font(.caption)
-								}
-							}
+						ExpenseListItemView(expense: expense)
 					}.onDelete(perform: deleteExpense)
 				}.listStyle(.plain)
 			}.toolbar{

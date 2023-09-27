@@ -22,7 +22,7 @@ struct ContentView: View {
 	
 	@State var showingNewExpensePopover = false
 	//@State private var path = NavigationPath()
-	@State var budget = 250.00 //set to default later in defaulter
+	@State var budget = 200.00 //set to default later in defaulter
 	
 	//let tempBudget = 200.00
 	//let tempSpent = 50.00

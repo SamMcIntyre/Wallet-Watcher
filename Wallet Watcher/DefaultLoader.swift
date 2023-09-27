@@ -30,7 +30,7 @@ class DefaultLoader{
 			//fill in some basic defaults
 			defaults.setValue(0.18, forKey: "gratuity")
 			defaults.setValue(0.00, forKey: "tax")
-			defaults.setValue(250.00, forKey: "budget")
+			defaults.setValue(200.00, forKey: "budget")
 			defaults.setValue("", forKey: "purpose")
 			defaults.setValue("", forKey: "location")
 		}

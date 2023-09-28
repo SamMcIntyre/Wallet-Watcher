@@ -18,12 +18,13 @@ struct FullExpenseListView: View {
 	
 	var body: some View {
 		NavigationStack{
-			GroupBox(label: Text("All Expenses").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)) {
+			GroupBox(label: Text("All Expenses").frame(maxWidth: .infinity, alignment: .center)) {
 				List{
 					ForEach(expenses) { expense in
 						ExpenseListItemView(expense: expense)
 					}.onDelete(perform: deleteExpense)
-				}.listStyle(.plain)
+				}
+				.listStyle(.plain)
 			}.toolbar{
 				ToolbarItem(placement: .navigationBarTrailing) {
 					EditButton()

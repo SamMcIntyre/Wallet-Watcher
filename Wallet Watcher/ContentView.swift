@@ -36,7 +36,7 @@ struct ContentView: View {
 					
 					//Add expense button
 					Button(action: {showingNewExpensePopover = true}) {
-						Label("Add Expense", systemImage: "plus");
+						Label("Add New Expense", systemImage: "plus");
 					}
 					.buttonStyle(.borderedProminent)
 					.popover(isPresented: $showingNewExpensePopover, content: {

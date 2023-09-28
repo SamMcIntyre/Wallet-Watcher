@@ -20,7 +20,6 @@ struct FullQuickListView: View {
 				GroupBox(label: Text("Quick Expenses").frame(maxWidth: .infinity, alignment: .center)) {
 					List{
 						ForEach(quickExpenses) { quickExpense in
-							//if(expense.)
 							QuickListItemView(quickExpense: quickExpense)
 						}
 						.onDelete(perform: deleteQuickExpense)

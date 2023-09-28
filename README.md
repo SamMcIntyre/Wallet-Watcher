@@ -38,11 +38,6 @@ This is an iOS app I designed for when you need to budget for a short time when 
  <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/4-Tutorial.png">
  <img alt="a screenshot of the tutorial page" src="/Screenshots/DarkMode/4-Tutorial.png" width="185px" height="400px">
 </picture>
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="/Screenshots/DarkMode/7-All_Expenses.png">
- <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/7-All_Expenses.png">
- <img alt="a screenshot of the all expenses page" src="/Screenshots/DarkMode/7-All_Expenses.png" width="185px" height="400px">
-</picture>
 
 View more screenshots in the Screenshots folder in this repository.
 

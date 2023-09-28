@@ -17,10 +17,39 @@ This is an iOS app I designed for when you need to budget for a short time when 
 - Persistant data storage that stores your data locally even between app and/or phone restarts.
 - A tutorial page to teach you how to better use the app.
 
+### Screenshots
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="/Screenshots/DarkMode/1-Dashboard.png">
+ <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/1-Dashboard.png">
+ <img alt="a screenshot of the dashboard" src="/Screenshots/DarktMode/1-Dashboard.png" width="185px" height="400px">
+</picture>
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="/Screenshots/DarkMode/2-New_Expense.png">
+ <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/2-New_Expense.png">
+ <img alt="a screenshot of the new expense page" src="/Screenshots/DarkMode/2-New_Expense.png" width="185px" height="400px">
+</picture>
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="/Screenshots/DarkMode/3-Settings.png">
+ <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/3-Settings.png">
+ <img alt="a screenshot of the settings page" src="/Screenshots/DarkMode/3-Settings.png" width="185px" height="400px">
+</picture>
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="/Screenshots/DarkMode/4-Tutorial.png">
+ <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/4-Tutorial.png">
+ <img alt="a screenshot of the tutorial page" src="/Screenshots/DarkMode/4-Tutorial.png" width="185px" height="400px">
+</picture>
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="/Screenshots/DarkMode/7-All_Expenses.png">
+ <source media="(prefers-color-scheme: light)" srcset="/Screenshots/LightMode/7-All_Expenses.png">
+ <img alt="a screenshot of the all expenses page" src="/Screenshots/DarkMode/7-All_Expenses.png" width="185px" height="400px">
+</picture>
+
+View more screenshots in the Screenshots folder in this repository.
+
 ### More Info
 I am not currently able to actually distribute this app yet, I do not have and cannot afford an Apple Devloper Account which is required for any sort of distribution.
 One might be able to download this repo and build the project within Xcode themselves and then upload it to their iPhone, but I honestly am not sure about that.
 
 The app is fully functional currently. I may later add a couple more features like widgets and iWatch support, but for now it works well.
 
-*Version 1.02*
+*Version 1.04*    -    *Requires iOS 17.0+*

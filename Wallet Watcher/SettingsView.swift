@@ -125,7 +125,7 @@ struct SettingsView: View {
 						.font(.headline)
 						.buttonStyle(.bordered)
 						.keyboardType(.numberPad)
-				}
+				}.clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
 				
 				Spacer()
 				Divider()

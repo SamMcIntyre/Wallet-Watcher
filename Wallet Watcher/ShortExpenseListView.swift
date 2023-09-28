@@ -28,6 +28,7 @@ struct ShortExpenseListView: View {
 						.listStyle(.plain)
 						.scrollDisabled(true)
 						.frame(height: 175)
+						.clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
 						NavigationLink(destination: FullExpenseListView()){
 							Text("View all").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						}

@@ -27,6 +27,7 @@ struct ShortQuickListView: View {
 						}
 						.listStyle(.plain)
 						.frame(height: 190)
+						.clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
 						NavigationLink(destination: FullQuickListView()){
 							Text("View all").frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						}

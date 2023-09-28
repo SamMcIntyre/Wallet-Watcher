@@ -37,7 +37,7 @@ struct QuickListItemView: View {
 				}
 			}
 		}
-		.buttonStyle(.automatic)
+		.buttonStyle(BorderedButtonStyle())
 
 	}
 	

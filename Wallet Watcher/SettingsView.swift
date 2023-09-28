@@ -130,10 +130,11 @@ struct SettingsView: View {
 				Spacer()
 				Divider()
 				
+				//CLEAR AND TUTORIAL
 				HStack{
 					Spacer()
 					
-					//RESET
+					//Clear
 					Button("Clear Expenses", action: {isShowingDialog = true})
 						.font(.headline)
 						.buttonStyle(.borderedProminent)
@@ -148,7 +149,7 @@ struct SettingsView: View {
 					
 					Spacer()
 					
-					//TUTORIAL
+					//Tutorial
 					Button(action: {isShowingTutorialPopover = true}) {
 						Text("How to Use");
 					}
@@ -167,6 +168,7 @@ struct SettingsView: View {
 		}
     }
 	
+	//function to update the user budget
 	private func updateBudget(newBudget: Double){
 		if(newBudget == -1.0){
 			print("invalid budget")
@@ -177,6 +179,7 @@ struct SettingsView: View {
 		}
 	}
 	
+	//function to update the user defaults
 	private func updateDefaults(newGratStr: String, newTaxStr: String, newPur: String, newLoc:String){
 		var cleanGrat = 0.0
 		var cleanTax = 0.0
@@ -222,6 +225,7 @@ struct SettingsView: View {
 		defaults.setValue(newLoc, forKey: "location")
 	}
 	
+	//function to clear expenses
 	private func clearExpenses(){
 		//clear expenses
 		modelContext.deleteAll(model: Expense.self)

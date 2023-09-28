@@ -29,6 +29,14 @@
 		E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */; };
 		E5B9A6A52AC2992500E3CAE8 /* FullExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */; };
 		E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */; };
+		E5C2ACD32AC5E5D8008D9BE8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C2ACD22AC5E5D8008D9BE8 /* WidgetKit.framework */; };
+		E5C2ACD52AC5E5D8008D9BE8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C2ACD42AC5E5D8008D9BE8 /* SwiftUI.framework */; };
+		E5C2ACD82AC5E5D8008D9BE8 /* WW_WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2ACD72AC5E5D8008D9BE8 /* WW_WidgetsBundle.swift */; };
+		E5C2ACDA2AC5E5D8008D9BE8 /* WW_WidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2ACD92AC5E5D8008D9BE8 /* WW_WidgetsLiveActivity.swift */; };
+		E5C2ACDC2AC5E5D8008D9BE8 /* WW_Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2ACDB2AC5E5D8008D9BE8 /* WW_Widgets.swift */; };
+		E5C2ACDE2AC5E5D8008D9BE8 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2ACDD2AC5E5D8008D9BE8 /* AppIntent.swift */; };
+		E5C2ACE02AC5E5D9008D9BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C2ACDF2AC5E5D9008D9BE8 /* Assets.xcassets */; };
+		E5C2ACE42AC5E5D9008D9BE8 /* WW_WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E5C2ACD02AC5E5D8008D9BE8 /* WW_WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +54,28 @@
 			remoteGlobalIDString = E52696B42AC1F8CA00413ECA;
 			remoteInfo = "Wallet Watcher";
 		};
+		E5C2ACE22AC5E5D9008D9BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52696AD2AC1F8CA00413ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C2ACCF2AC5E5D8008D9BE8;
+			remoteInfo = WW_WidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5C2ACE52AC5E5D9008D9BE8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E5C2ACE42AC5E5D9008D9BE8 /* WW_WidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E52696B52AC1F8CA00413ECA /* Wallet Watcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wallet Watcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +103,15 @@
 		E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailView.swift; sourceTree = "<group>"; };
 		E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullExpenseListView.swift; sourceTree = "<group>"; };
 		E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E5C2ACD02AC5E5D8008D9BE8 /* WW_WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WW_WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C2ACD22AC5E5D8008D9BE8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E5C2ACD42AC5E5D8008D9BE8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E5C2ACD72AC5E5D8008D9BE8 /* WW_WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_WidgetsBundle.swift; sourceTree = "<group>"; };
+		E5C2ACD92AC5E5D8008D9BE8 /* WW_WidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_WidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		E5C2ACDB2AC5E5D8008D9BE8 /* WW_Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WW_Widgets.swift; sourceTree = "<group>"; };
+		E5C2ACDD2AC5E5D8008D9BE8 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		E5C2ACDF2AC5E5D9008D9BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5C2ACE12AC5E5D9008D9BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +136,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5C2ACCD2AC5E5D8008D9BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C2ACD52AC5E5D8008D9BE8 /* SwiftUI.framework in Frameworks */,
+				E5C2ACD32AC5E5D8008D9BE8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +154,8 @@
 				E52696B72AC1F8CA00413ECA /* Wallet Watcher */,
 				E52696CA2AC1F8CB00413ECA /* Wallet WatcherTests */,
 				E52696D42AC1F8CB00413ECA /* Wallet WatcherUITests */,
+				E5C2ACD62AC5E5D8008D9BE8 /* WW_Widgets */,
+				E5C2ACD12AC5E5D8008D9BE8 /* Frameworks */,
 				E52696B62AC1F8CA00413ECA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +166,7 @@
 				E52696B52AC1F8CA00413ECA /* Wallet Watcher.app */,
 				E52696C72AC1F8CB00413ECA /* Wallet WatcherTests.xctest */,
 				E52696D12AC1F8CB00413ECA /* Wallet WatcherUITests.xctest */,
+				E5C2ACD02AC5E5D8008D9BE8 /* WW_WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +222,28 @@
 			path = "Wallet WatcherUITests";
 			sourceTree = "<group>";
 		};
+		E5C2ACD12AC5E5D8008D9BE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5C2ACD22AC5E5D8008D9BE8 /* WidgetKit.framework */,
+				E5C2ACD42AC5E5D8008D9BE8 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5C2ACD62AC5E5D8008D9BE8 /* WW_Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				E5C2ACD72AC5E5D8008D9BE8 /* WW_WidgetsBundle.swift */,
+				E5C2ACD92AC5E5D8008D9BE8 /* WW_WidgetsLiveActivity.swift */,
+				E5C2ACDB2AC5E5D8008D9BE8 /* WW_Widgets.swift */,
+				E5C2ACDD2AC5E5D8008D9BE8 /* AppIntent.swift */,
+				E5C2ACDF2AC5E5D9008D9BE8 /* Assets.xcassets */,
+				E5C2ACE12AC5E5D9008D9BE8 /* Info.plist */,
+			);
+			path = WW_Widgets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,10 +254,12 @@
 				E52696B12AC1F8CA00413ECA /* Sources */,
 				E52696B22AC1F8CA00413ECA /* Frameworks */,
 				E52696B32AC1F8CA00413ECA /* Resources */,
+				E5C2ACE52AC5E5D9008D9BE8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5C2ACE32AC5E5D9008D9BE8 /* PBXTargetDependency */,
 			);
 			name = "Wallet Watcher";
 			productName = "Wallet Watcher";
@@ -228,6 +302,23 @@
 			productReference = E52696D12AC1F8CB00413ECA /* Wallet WatcherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E5C2ACCF2AC5E5D8008D9BE8 /* WW_WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5C2ACE82AC5E5D9008D9BE8 /* Build configuration list for PBXNativeTarget "WW_WidgetsExtension" */;
+			buildPhases = (
+				E5C2ACCC2AC5E5D8008D9BE8 /* Sources */,
+				E5C2ACCD2AC5E5D8008D9BE8 /* Frameworks */,
+				E5C2ACCE2AC5E5D8008D9BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WW_WidgetsExtension;
+			productName = WW_WidgetsExtension;
+			productReference = E5C2ACD02AC5E5D8008D9BE8 /* WW_WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,6 +340,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = E52696B42AC1F8CA00413ECA;
 					};
+					E5C2ACCF2AC5E5D8008D9BE8 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = E52696B02AC1F8CA00413ECA /* Build configuration list for PBXProject "Wallet Watcher" */;
@@ -267,6 +361,7 @@
 				E52696B42AC1F8CA00413ECA /* Wallet Watcher */,
 				E52696C62AC1F8CB00413ECA /* Wallet WatcherTests */,
 				E52696D02AC1F8CB00413ECA /* Wallet WatcherUITests */,
+				E5C2ACCF2AC5E5D8008D9BE8 /* WW_WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -292,6 +387,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C2ACCE2AC5E5D8008D9BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C2ACE02AC5E5D9008D9BE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +442,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5C2ACCC2AC5E5D8008D9BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C2ACDC2AC5E5D8008D9BE8 /* WW_Widgets.swift in Sources */,
+				E5C2ACDE2AC5E5D8008D9BE8 /* AppIntent.swift in Sources */,
+				E5C2ACDA2AC5E5D8008D9BE8 /* WW_WidgetsLiveActivity.swift in Sources */,
+				E5C2ACD82AC5E5D8008D9BE8 /* WW_WidgetsBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -351,6 +465,11 @@
 			isa = PBXTargetDependency;
 			target = E52696B42AC1F8CA00413ECA /* Wallet Watcher */;
 			targetProxy = E52696D22AC1F8CB00413ECA /* PBXContainerItemProxy */;
+		};
+		E5C2ACE32AC5E5D9008D9BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C2ACCF2AC5E5D8008D9BE8 /* WW_WidgetsExtension */;
+			targetProxy = E5C2ACE22AC5E5D9008D9BE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -477,6 +596,7 @@
 		E52696DC2AC1F8CB00413ECA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +630,7 @@
 		E52696DD2AC1F8CB00413ECA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +737,60 @@
 			};
 			name = Release;
 		};
+		E5C2ACE62AC5E5D9008D9BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WYX8JDTD8K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WW_Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WW_Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbalStudios.Wallet-Watcher.WW-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5C2ACE72AC5E5D9008D9BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WYX8JDTD8K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WW_Widgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WW_Widgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbalStudios.Wallet-Watcher.WW-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -651,6 +826,15 @@
 			buildConfigurations = (
 				E52696E22AC1F8CB00413ECA /* Debug */,
 				E52696E32AC1F8CB00413ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5C2ACE82AC5E5D9008D9BE8 /* Build configuration list for PBXNativeTarget "WW_WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5C2ACE62AC5E5D9008D9BE8 /* Debug */,
+				E5C2ACE72AC5E5D9008D9BE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

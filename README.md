@@ -42,8 +42,9 @@ This is an iOS app I designed for when you need to budget for a short time when 
 View more screenshots in the Screenshots folder in this repository.
 
 ### More Info
-I am not currently able to actually distribute this app yet, I do not have and cannot afford an Apple Devloper Account which is required for any sort of distribution.
-One might be able to download this repo and build the project within Xcode themselves and then upload it to their iPhone, but I honestly am not sure about that.
+I am not currently able to actually distribute this app yet, I do not have and cannot afford an Apple Developer account which is required for any sort of distribution.
+There is technically a compiled and packaged .app release, but I'm not certain this would actually work, even if you side-loaded it onto your iPhone somehow.
+One might be able to download this repo and build the project within Xcode themselves and then upload it to their iPhone, but I honestly am not sure about that either.
 
 The app is fully functional currently. I may later add a couple more features like widgets and iWatch support, but for now it works well.
 

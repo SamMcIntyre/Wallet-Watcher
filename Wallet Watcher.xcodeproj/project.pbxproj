@@ -50,6 +50,10 @@
 		E5C2AD322AC649A9008D9BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52696BE2AC1F8CB00413ECA /* Assets.xcassets */; };
 		E5C2AD342AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */; };
 		E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */; };
+		E5C2AD3A2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */; };
+		E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */; };
+		E5C2AD3D2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
+		E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +145,8 @@
 		E5C2AD2B2AC626E7008D9BE8 /* Wallet Watcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wallet Watcher.entitlements"; sourceTree = "<group>"; };
 		E5C2AD2C2AC62797008D9BE8 /* WWWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WWWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWalletGaugeView.swift; sourceTree = "<group>"; };
+		E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccCircWalletGaugeView.swift; sourceTree = "<group>"; };
+		E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccRectWalletGaugeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,7 +305,9 @@
 				E52696E42AC2077200413ECA /* Expense.swift */,
 				E58CDDF72AC36727004C949C /* Wallet.swift */,
 				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
+				E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */,
 				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
+				E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */,
 				E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */,
 				E52696BE2AC1F8CB00413ECA /* Assets.xcassets */,
 			);
@@ -498,12 +506,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E58CDDF82AC36727004C949C /* Wallet.swift in Sources */,
+				E5C2AD3D2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */,
 				E52696E52AC2077200413ECA /* Expense.swift in Sources */,
 				E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */,
 				E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */,
 				E58CDDF42AC34ED3004C949C /* FullQuickListView.swift in Sources */,
 				E5C2AD342AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
 				E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */,
+				E5C2AD3A2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */,
 				E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */,
 				E58CDDF02AC3436D004C949C /* ShortQuickListView.swift in Sources */,
 				E58CDDF22AC344BE004C949C /* QuickListItemView.swift in Sources */,
@@ -551,8 +561,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C2AD2F2AC62B16008D9BE8 /* Expense.swift in Sources */,
+				E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */,
 				E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */,
 				E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */,
+				E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */,
 				E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
 				E5C2AD2E2AC62B10008D9BE8 /* QuickExpense.swift in Sources */,
 				E5C2AD092AC61BC8008D9BE8 /* WWWidgetsBundle.swift in Sources */,

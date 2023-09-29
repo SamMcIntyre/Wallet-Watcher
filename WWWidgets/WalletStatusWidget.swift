@@ -76,13 +76,17 @@ struct StatusEntryView : View {
 			}else{
 				//successfully pulled down the data
 				
-				//display either large or small version of the gauge
+				//change display based on family
 				switch family {
 				case .systemSmall:
 					SmallWalletGaugeView(wallet: entry.wallet)
 				case .systemMedium:
 					WalletGaugeView(wallet: entry.wallet)
 						.frame(width: 340, height: 175)
+				case .accessoryCircular:
+					AccCircWalletGaugeView(wallet: entry.wallet)
+				case .accessoryRectangular:
+					AccRectWalletGaugeView(wallet: entry.wallet)
 				default:
 					SmallWalletGaugeView(wallet: entry.wallet)
 				}
@@ -110,7 +114,7 @@ struct WalletStatusWidget: Widget {
         }
         .configurationDisplayName("Wallet Status")
         .description("Displays your current wallet status.")
-		.supportedFamilies([.systemSmall, .systemMedium])
+		.supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
     }
 }
 

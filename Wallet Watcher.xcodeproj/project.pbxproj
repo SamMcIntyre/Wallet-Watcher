@@ -54,9 +54,7 @@
 		E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */; };
 		E5C2AD3D2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
 		E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
-		E5C2AD402AC68DEF008D9BE8 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3F2AC68DEF008D9BE8 /* AppIntent.swift */; };
 		E5C2AD412AC68DEF008D9BE8 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3F2AC68DEF008D9BE8 /* AppIntent.swift */; };
-		E5C2AD432AC68DF6008D9BE8 /* QuickExpenseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD422AC68DF6008D9BE8 /* QuickExpenseWidget.swift */; };
 		E5C2AD442AC68DF6008D9BE8 /* QuickExpenseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD422AC68DF6008D9BE8 /* QuickExpenseWidget.swift */; };
 		E5C2AD462AC68FE3008D9BE8 /* WidgetQuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD452AC68FE3008D9BE8 /* WidgetQuickExpense.swift */; };
 		E5C2AD472AC68FE3008D9BE8 /* WidgetQuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD452AC68FE3008D9BE8 /* WidgetQuickExpense.swift */; };
@@ -529,8 +527,6 @@
 				E5C2AD3A2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */,
 				E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */,
 				E58CDDF02AC3436D004C949C /* ShortQuickListView.swift in Sources */,
-				E5C2AD402AC68DEF008D9BE8 /* AppIntent.swift in Sources */,
-				E5C2AD432AC68DF6008D9BE8 /* QuickExpenseWidget.swift in Sources */,
 				E58CDDF22AC344BE004C949C /* QuickListItemView.swift in Sources */,
 				E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */,
 				E5B9A69B2AC21F4A00E3CAE8 /* NewExpenseView.swift in Sources */,

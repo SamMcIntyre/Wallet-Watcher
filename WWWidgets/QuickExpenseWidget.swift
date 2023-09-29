@@ -7,37 +7,60 @@
 
 import WidgetKit
 import SwiftUI
+import SwiftData
 
 struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+	
+	//make the model contatainer to pull down the current wallet
+	private let modelContainer: ModelContainer
+	init() {
+		do {
+			modelContainer = try ModelContainer(for: Expense.self, QuickExpense.self, Wallet.self)
+		} catch {
+			fatalError("Failed to create the model container: \(error)")
+		}
+	}
+	
+	
+    func placeholder(in context: Context) -> QuickExpenseEntry {
+        QuickExpenseEntry(date: Date(), configuration: QuickExpenseIntent(), quickExpense: QuickExpense(price: 23.3))
     }
 
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+	@MainActor
+    func snapshot(for configuration: QuickExpenseIntent, in context: Context) async -> QuickExpenseEntry {
+		
+		let quickExpenses = try? modelContainer.mainContext.fetch(FetchDescriptor<QuickExpense>())
+		
+		return QuickExpenseEntry(date: Date(), configuration: configuration, quickExpense: quickExpenses?[0] ?? QuickExpense(price: -1.00))
     }
     
-    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
+	@MainActor
+    func timeline(for configuration: QuickExpenseIntent, in context: Context) async -> Timeline<QuickExpenseEntry> {
+        var entries: [QuickExpenseEntry] = []
+		
+		let quickExpenses = try? modelContainer.mainContext.fetch(FetchDescriptor<QuickExpense>())
+		
+		//return QuickEntry(date: Date(), configuration: configuration, quickExpense: quickExpenses?[0] ?? QuickExpense(price: -1.00))
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+			let entry = QuickExpenseEntry(date: entryDate, configuration: configuration, quickExpense: quickExpenses?[0] ?? QuickExpense(price: -1.00))
             entries.append(entry)
         }
 
-        return Timeline(entries: entries, policy: .atEnd)
+        return Timeline(entries: entries, policy: .never)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct QuickExpenseEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigurationAppIntent
+    let configuration: QuickExpenseIntent
+	let quickExpense: QuickExpense
 }
 
-struct WW_WidgetsEntryView : View {
+struct QuickExpenseEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -47,6 +70,8 @@ struct WW_WidgetsEntryView : View {
 
             Text("Favorite Emoji:")
             Text(entry.configuration.favoriteEmoji)
+			
+			Text(String(entry.quickExpense.price))
         }
     }
 }
@@ -55,30 +80,38 @@ struct QuickExpenseWidget: Widget {
     let kind: String = "WW_Widgets"
 
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            WW_WidgetsEntryView(entry: entry)
+        AppIntentConfiguration(kind: kind, intent: QuickExpenseIntent.self, provider: Provider()) { entry in
+            QuickExpenseEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
+extension QuickExpenseIntent {
+    fileprivate static var smiley: QuickExpenseIntent {
+        let intent = QuickExpenseIntent()
         intent.favoriteEmoji = "😀"
         return intent
     }
     
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
+    fileprivate static var starEyes: QuickExpenseIntent {
+        let intent = QuickExpenseIntent()
         intent.favoriteEmoji = "🤩"
         return intent
     }
+	
+	fileprivate static var thing: QuickExpenseIntent{
+		let intent = QuickExpenseIntent()
+		intent.favoriteEmoji = "🙋‍♂️"
+		return intent
+	}
+	
+	
 }
 
 #Preview(as: .systemSmall) {
     QuickExpenseWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    QuickExpenseEntry(date: .now, configuration: .smiley, quickExpense: QuickExpense(price: 23.3))
+    QuickExpenseEntry(date: .now, configuration: .thing, quickExpense: QuickExpense(price: 23.3))
 }

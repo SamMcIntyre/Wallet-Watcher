@@ -7,10 +7,20 @@
 
 import WidgetKit
 import AppIntents
+import SwiftData
 
-struct ConfigurationAppIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource = "Configuration"
-    static var description = IntentDescription("This is an example widget.")
+struct QuickExpenseIntent: WidgetConfigurationIntent {
+    static var title: LocalizedStringResource = "Quick Expense"
+    static var description = IntentDescription("Pick which Quick Expense to display.")
+	
+	private let modelContainer: ModelContainer
+	init() {
+		do {
+			modelContainer = try ModelContainer(for: Expense.self, QuickExpense.self, Wallet.self)
+		} catch {
+			fatalError("Failed to create the model container: \(error)")
+		}
+	}
 
     // An example configurable parameter.
     @Parameter(title: "Favorite Emoji", default: "😃")
@@ -19,3 +29,7 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
 	//@Parameter(title: "Quick Expense", default: "😃")
 	//var quickExpense: WidgetQuickExpense
 }
+
+//extension QuickExpense{
+	
+//}

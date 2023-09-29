@@ -42,11 +42,14 @@
 		E5C2AD092AC61BC8008D9BE8 /* WWWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */; };
 		E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */; };
 		E5C2AD0D2AC61BC8008D9BE8 /* WalletStatusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */; };
-		E5C2AD0F2AC61BC9008D9BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C2AD0E2AC61BC9008D9BE8 /* Assets.xcassets */; };
 		E5C2AD132AC61BC9008D9BE8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF72AC36727004C949C /* Wallet.swift */; };
 		E5C2AD2E2AC62B10008D9BE8 /* QuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDED2AC33087004C949C /* QuickExpense.swift */; };
 		E5C2AD2F2AC62B16008D9BE8 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696E42AC2077200413ECA /* Expense.swift */; };
+		E5C2AD312AC64362008D9BE8 /* WalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */; };
+		E5C2AD322AC649A9008D9BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52696BE2AC1F8CB00413ECA /* Assets.xcassets */; };
+		E5C2AD342AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */; };
+		E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,10 +137,10 @@
 		E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWidgetsBundle.swift; sourceTree = "<group>"; };
 		E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWidgetsLiveActivity.swift; sourceTree = "<group>"; };
 		E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletStatusWidget.swift; sourceTree = "<group>"; };
-		E5C2AD0E2AC61BC9008D9BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C2AD102AC61BC9008D9BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C2AD2B2AC626E7008D9BE8 /* Wallet Watcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wallet Watcher.entitlements"; sourceTree = "<group>"; };
 		E5C2AD2C2AC62797008D9BE8 /* WWWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WWWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWalletGaugeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,10 +228,8 @@
 				E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */,
 				E58CDDEF2AC3436D004C949C /* ShortQuickListView.swift */,
 				E58CDDF92AC39D08004C949C /* TutorialView.swift */,
-				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
 				E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */,
 				E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */,
-				E52696BE2AC1F8CB00413ECA /* Assets.xcassets */,
 				E52696C02AC1F8CB00413ECA /* Preview Content */,
 			);
 			path = "Wallet Watcher";
@@ -287,7 +288,6 @@
 				E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */,
 				E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */,
 				E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */,
-				E5C2AD0E2AC61BC9008D9BE8 /* Assets.xcassets */,
 				E5C2AD102AC61BC9008D9BE8 /* Info.plist */,
 			);
 			path = WWWidgets;
@@ -299,6 +299,9 @@
 				E52696E42AC2077200413ECA /* Expense.swift */,
 				E58CDDF72AC36727004C949C /* Wallet.swift */,
 				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
+				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
+				E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */,
+				E52696BE2AC1F8CB00413ECA /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -483,7 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C2AD0F2AC61BC9008D9BE8 /* Assets.xcassets in Resources */,
+				E5C2AD322AC649A9008D9BE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +502,7 @@
 				E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */,
 				E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */,
 				E58CDDF42AC34ED3004C949C /* FullQuickListView.swift in Sources */,
+				E5C2AD342AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
 				E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */,
 				E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */,
 				E58CDDF02AC3436D004C949C /* ShortQuickListView.swift in Sources */,
@@ -549,9 +553,11 @@
 				E5C2AD2F2AC62B16008D9BE8 /* Expense.swift in Sources */,
 				E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */,
 				E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */,
+				E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
 				E5C2AD2E2AC62B10008D9BE8 /* QuickExpense.swift in Sources */,
 				E5C2AD092AC61BC8008D9BE8 /* WWWidgetsBundle.swift in Sources */,
 				E5C2AD0D2AC61BC8008D9BE8 /* WalletStatusWidget.swift in Sources */,
+				E5C2AD312AC64362008D9BE8 /* WalletGaugeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

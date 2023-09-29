@@ -14,6 +14,7 @@ struct WWWidgetsBundle: WidgetBundle {
 	
     var body: some Widget {
         WalletStatusWidget()
+		QuickExpenseWidget()
         WWWidgetsLiveActivity()
     }
 }

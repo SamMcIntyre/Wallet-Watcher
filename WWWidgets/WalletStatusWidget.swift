@@ -1,5 +1,5 @@
 //
-//  WWWidgets.swift
+//  WalletStatusWidget.swift
 //  WWWidgets
 //
 //  Created by Sam McIntyre on 9/28/23.

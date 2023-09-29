@@ -1,5 +1,5 @@
 //
-//  SmallWalletGaugeView.swift
+//  AccCircWalletGaugeView.swift
 //  Wallet Watcher
 //
 //  Created by Sam McIntyre on 9/28/23.
@@ -18,11 +18,6 @@ struct AccCircWalletGaugeView: View {
 			
 			VStack{
 				Gauge(value: wallet.spent, in: 0...wallet.budget) {
-					//Image("WalletWatcher_logo")
-					//	.resizable(resizingMode: .stretch)
-					//	.aspectRatio(contentMode: .fill)
-					//	.frame(width: 50, height: 50
-					//	)
 				} currentValueLabel: {
 					Text("$" + String(format:"%.2f", wallet.spent))
 						.font(.caption.monospacedDigit())

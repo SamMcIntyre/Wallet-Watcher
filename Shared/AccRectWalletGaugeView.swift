@@ -29,7 +29,7 @@ struct AccRectWalletGaugeView: View {
 						 .font(.caption2.monospaced())
 				 }
 				.gaugeStyle(.accessoryLinear)
-				.tint(.green)
+				.tint(.wwDarkGreen)
 				Text("$" + String(format:"%.2f", wallet.spent))
 					.font(.subheadline.monospacedDigit())
 			}

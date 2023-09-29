@@ -28,7 +28,7 @@ struct SmallWalletGaugeView: View {
 						.font(.caption.monospacedDigit())
 				}
 				.gaugeStyle(.accessoryCircular)
-				.tint(.green)
+				.tint(.wwDarkGreen)
 				.scaleEffect(CGSize(width: 2.0, height: 2.0))
 				.padding(.top)
 

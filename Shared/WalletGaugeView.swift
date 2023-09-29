@@ -33,7 +33,7 @@ struct WalletGaugeView: View {
 					.font(.caption2.monospaced())
 			}
 			.gaugeStyle(DefaultGaugeStyle())
-			.tint(.green)
+			.tint(.wwDarkGreen)
 			
 			Spacer()
 		}

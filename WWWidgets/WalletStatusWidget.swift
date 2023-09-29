@@ -104,7 +104,7 @@ struct WalletStatusWidget: Widget {
                 StatusEntryView(entry: entry)
 					.frame(maxWidth: .infinity, maxHeight:.infinity)
                     .containerBackground(.fill.tertiary, for: .widget)
-					.background(Color.accentColor.gradient)
+					.background(Color.widgetBackground.gradient)
 					.clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             } else {
                 StatusEntryView(entry: entry)

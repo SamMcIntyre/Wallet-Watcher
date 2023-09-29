@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import Combine
+import WidgetKit
 
 //defines the Settings menu, which provides plenty of backend options.
 struct SettingsView: View {
@@ -176,6 +177,9 @@ struct SettingsView: View {
 			defaults.setValue(newBudget, forKey: "budget")
 			wallets[0].budget = newBudget
 			value = ""
+			
+			//update widgets
+			WidgetCenter.shared.reloadAllTimelines()
 		}
 	}
 	
@@ -232,6 +236,9 @@ struct SettingsView: View {
 		
 		//clear wallet
 		wallets[0].spent = 0.0
+		
+		//update widgets
+		WidgetCenter.shared.reloadAllTimelines()
 	}
 	
 	//function to pull the user defaults

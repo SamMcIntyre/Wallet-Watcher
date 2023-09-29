@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 //defines a short list of the most recent Expenses for the dashboard.
 struct ShortExpenseListView: View {
@@ -42,6 +43,9 @@ struct ShortExpenseListView: View {
 			for index in offsets {
 				wallets[0].spent -= expenses[index].total
 				modelContext.delete(expenses[index])
+				
+				//update widgets
+				WidgetCenter.shared.reloadAllTimelines()
 			}
 		}
 	}

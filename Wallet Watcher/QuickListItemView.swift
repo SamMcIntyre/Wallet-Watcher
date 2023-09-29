@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 //defines A Quick Expense Item, which are used to build Quick Expense Lists
 struct QuickListItemView: View {
@@ -53,6 +54,11 @@ struct QuickListItemView: View {
 		} catch {
 			print(error.localizedDescription)
 		}
+		
+		//update widgets
+		WidgetCenter.shared.reloadAllTimelines()
+		
+		//dismiss
 		dismiss()
 	}
     

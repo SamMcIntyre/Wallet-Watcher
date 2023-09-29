@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 //defines the comprehensive List of Expenses
 struct FullExpenseListView: View {
@@ -39,6 +40,9 @@ struct FullExpenseListView: View {
 			for index in offsets {
 				modelContext.delete(expenses[index])
 				wallets[0].spent -= expenses[index].total
+				
+				//update widgets
+				WidgetCenter.shared.reloadAllTimelines()
 			}
 		}
 	}

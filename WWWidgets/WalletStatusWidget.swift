@@ -15,7 +15,7 @@ struct StatusProvider: TimelineProvider {
 	private let modelContainer: ModelContainer
 	init() {
 		do {
-			modelContainer = try ModelContainer(for: Wallet.self)
+			modelContainer = try ModelContainer(for: Expense.self, QuickExpense.self, Wallet.self)
 		} catch {
 			fatalError("Failed to create the model container: \(error)")
 		}
@@ -47,7 +47,7 @@ struct StatusProvider: TimelineProvider {
 		let entry = StatusEntry(wallet: wallets?[0] ?? Wallet(spent: -1.00, budget: 200.00))
 		entries.append(entry)
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .never)
         completion(timeline)
     }
 }

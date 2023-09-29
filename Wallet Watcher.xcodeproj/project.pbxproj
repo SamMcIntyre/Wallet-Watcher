@@ -194,7 +194,6 @@
 				E52696CA2AC1F8CB00413ECA /* Wallet WatcherTests */,
 				E52696D42AC1F8CB00413ECA /* Wallet WatcherUITests */,
 				E5C2ACD62AC5E5D8008D9BE8 /* WW_Widgets */,
-				E5C2AD2C2AC62797008D9BE8 /* WWWidgetsExtension.entitlements */,
 				E5C2AD072AC61BC8008D9BE8 /* WWWidgets */,
 				E5C2ACD12AC5E5D8008D9BE8 /* Frameworks */,
 				E52696B62AC1F8CA00413ECA /* Products */,
@@ -285,6 +284,7 @@
 		E5C2AD072AC61BC8008D9BE8 /* WWWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				E5C2AD2C2AC62797008D9BE8 /* WWWidgetsExtension.entitlements */,
 				E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */,
 				E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */,
 				E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */,

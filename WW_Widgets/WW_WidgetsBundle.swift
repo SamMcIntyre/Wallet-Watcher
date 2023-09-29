@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct WW_WidgetsBundle: WidgetBundle {
     var body: some Widget {
-        WW_Widgets()
+        ColoredWidget()
         WW_WidgetsLiveActivity()
     }
 }

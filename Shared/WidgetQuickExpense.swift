@@ -12,15 +12,6 @@ import AppIntents
 import SwiftUI
 
 // defines a widget quick expense, which allows user to select a button for a widget
-/*
-@Model
-final class WidgetQuickExpense{ // needs to conform to _IntentValue
-	init(){
-		
-	}
-}
-*/
-
 struct WidgetQuickExpense: AppEntity{
 	var id: UUID
 	var quickExpense: QuickExpense
@@ -52,25 +43,25 @@ struct WidgetQuickExpenseQuery: EntityQuery{
 	}
 	
 	//filtered show
-	@MainActor
 	func entities(for identifiers: [WidgetQuickExpense.ID]) async throws -> [WidgetQuickExpense] {
-		let allQuickExpenses = (try? modelContainer.mainContext.fetch(FetchDescriptor<QuickExpense>())) ?? [QuickExpense(price: -1.00)]
-		var allWidgetQEs: [WidgetQuickExpense] = []
-		
-		for quickExpense in allQuickExpenses{
-			let newID = UUID()
-			let newWidgetQuickExpense = WidgetQuickExpense(id: newID, quickExpense: quickExpense)
-			allWidgetQEs.append(newWidgetQuickExpense)
-		}
-		let filtered = allWidgetQEs.filter{
+		let filtered = await getAllQuickExpenses().filter{
 			identifiers.contains($0.id)
 		}
 		return filtered
 	}
 	
 	//show all the options
-	@MainActor
 	func suggestedEntities() async throws -> [WidgetQuickExpense] {
+		return await getAllQuickExpenses()
+	}
+	
+	//default
+	func defaultResult() async -> WidgetQuickExpense? {
+		try? await suggestedEntities().first
+	}
+	
+	@MainActor
+	private func getAllQuickExpenses() -> [WidgetQuickExpense]{
 		let allQuickExpenses = (try? modelContainer.mainContext.fetch(FetchDescriptor<QuickExpense>())) ?? [QuickExpense(price: -1.00)]
 		var allWidgetQEs: [WidgetQuickExpense] = []
 		
@@ -81,18 +72,15 @@ struct WidgetQuickExpenseQuery: EntityQuery{
 		}
 		return allWidgetQEs
 	}
-	
-	//default
-	func defaultResult() async -> WidgetQuickExpense? {
-		return WidgetQuickExpense(id: UUID(), quickExpense: QuickExpense(price: -1.00))
-	}
 }
 
 struct QuickExpenseIntent: WidgetConfigurationIntent {
 	static var title: LocalizedStringResource = "Select Quick Expense"
 	static var description = IntentDescription("Select quick expense for display.")
 
-	// An example configurable parameter.
+	//configurable parameter.
 	@Parameter(title: "Quick Expense")
 	var quickExpense: WidgetQuickExpense
+	
+	
 }

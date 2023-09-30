@@ -76,13 +76,16 @@ struct QuickExpenseEntryView : View {
 }
 
 struct QuickExpenseWidget: Widget {
-    let kind: String = "WW_Widgets"
+    let kind: String = "Quick Expense"
 
     var body: some WidgetConfiguration {
 		AppIntentConfiguration(kind: kind, intent: QuickExpenseIntent.self, provider: QuickExpenseProvider()) { entry in
             QuickExpenseEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+		.configurationDisplayName("Quick Expense")
+		.description("Quickly add expenses from your home screen.")
+		.supportedFamilies([.systemSmall])
     }
 }
 /*

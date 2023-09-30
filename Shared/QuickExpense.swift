@@ -9,17 +9,18 @@ import Foundation
 import SwiftData
 
 //defines a quick expense, which allows users to re-add an Expense very quickly
+//complies to Sendable but for some reason the compiler still throws a warning if not marked unchecked
 @Model
-final class QuickExpense{
-	var price: Double
-	var formattedPrice: String
-	var tax: Double
-	var gratuity: Double
-	var total: Double
-	var formattedTotal: String
-	var timestamp: Date
-	var purpose: String
-	var location: String
+final class QuickExpense: @unchecked Sendable{
+	let price: Double
+	let formattedPrice: String
+	let tax: Double
+	let gratuity: Double
+	let total: Double
+	let formattedTotal: String
+	let timestamp: Date
+	let purpose: String
+	let location: String
 	
 	init(price: Double, grat: Double, tax: Double, purpose: String, location: String){
 		self.price = price

@@ -1,5 +1,5 @@
 //
-//  AppIntent.swift
+//  QuickExpenseIntent.swift
 //  WWWidgets
 //
 //  Created by Sam McIntyre on 9/28/23.
@@ -8,7 +8,7 @@
 import WidgetKit
 import AppIntents
 import SwiftData
-
+/*
 struct QuickExpenseIntent: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Quick Expense"
     static var description = IntentDescription("Pick which Quick Expense to display.")
@@ -29,6 +29,7 @@ struct QuickExpenseIntent: WidgetConfigurationIntent {
 	//@Parameter(title: "Quick Expense", default: "😃")
 	//var quickExpense: WidgetQuickExpense
 }
+*/
 
 //extension QuickExpense{
 	

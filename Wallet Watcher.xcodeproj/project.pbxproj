@@ -54,7 +54,7 @@
 		E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */; };
 		E5C2AD3D2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
 		E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
-		E5C2AD412AC68DEF008D9BE8 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3F2AC68DEF008D9BE8 /* AppIntent.swift */; };
+		E5C2AD412AC68DEF008D9BE8 /* QuickExpenseIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3F2AC68DEF008D9BE8 /* QuickExpenseIntent.swift */; };
 		E5C2AD442AC68DF6008D9BE8 /* QuickExpenseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD422AC68DF6008D9BE8 /* QuickExpenseWidget.swift */; };
 		E5C2AD462AC68FE3008D9BE8 /* WidgetQuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD452AC68FE3008D9BE8 /* WidgetQuickExpense.swift */; };
 		E5C2AD472AC68FE3008D9BE8 /* WidgetQuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD452AC68FE3008D9BE8 /* WidgetQuickExpense.swift */; };
@@ -151,7 +151,7 @@
 		E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWalletGaugeView.swift; sourceTree = "<group>"; };
 		E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccCircWalletGaugeView.swift; sourceTree = "<group>"; };
 		E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccRectWalletGaugeView.swift; sourceTree = "<group>"; };
-		E5C2AD3F2AC68DEF008D9BE8 /* AppIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		E5C2AD3F2AC68DEF008D9BE8 /* QuickExpenseIntent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickExpenseIntent.swift; sourceTree = "<group>"; };
 		E5C2AD422AC68DF6008D9BE8 /* QuickExpenseWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickExpenseWidget.swift; sourceTree = "<group>"; };
 		E5C2AD452AC68FE3008D9BE8 /* WidgetQuickExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetQuickExpense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,7 +302,7 @@
 				E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */,
 				E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */,
 				E5C2AD422AC68DF6008D9BE8 /* QuickExpenseWidget.swift */,
-				E5C2AD3F2AC68DEF008D9BE8 /* AppIntent.swift */,
+				E5C2AD3F2AC68DEF008D9BE8 /* QuickExpenseIntent.swift */,
 				E5C2AD102AC61BC9008D9BE8 /* Info.plist */,
 			);
 			path = WWWidgets;
@@ -575,7 +575,7 @@
 				E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */,
 				E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */,
 				E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */,
-				E5C2AD412AC68DEF008D9BE8 /* AppIntent.swift in Sources */,
+				E5C2AD412AC68DEF008D9BE8 /* QuickExpenseIntent.swift in Sources */,
 				E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */,
 				E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
 				E5C2AD472AC68FE3008D9BE8 /* WidgetQuickExpense.swift in Sources */,

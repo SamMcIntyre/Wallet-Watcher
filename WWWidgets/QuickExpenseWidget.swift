@@ -9,7 +9,7 @@ import WidgetKit
 import SwiftUI
 import SwiftData
 
-struct Provider: AppIntentTimelineProvider {
+struct QuickExpenseProvider: AppIntentTimelineProvider {
 	
 	//make the model contatainer to pull down the current wallet
 	private let modelContainer: ModelContainer
@@ -49,7 +49,6 @@ struct Provider: AppIntentTimelineProvider {
 			let entry = QuickExpenseEntry(date: entryDate, configuration: configuration, quickExpense: quickExpenses?[0] ?? QuickExpense(price: -1.00))
             entries.append(entry)
         }
-
         return Timeline(entries: entries, policy: .never)
     }
 }
@@ -61,17 +60,17 @@ struct QuickExpenseEntry: TimelineEntry {
 }
 
 struct QuickExpenseEntryView : View {
-    var entry: Provider.Entry
+    var entry: QuickExpenseProvider.Entry
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+			Text(String(entry.quickExpense.price))
+			
+            Text("This is the quickExpense stuff")
+            //Text(entry.date, style: .time)
 
             Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
-			
-			Text(String(entry.quickExpense.price))
+            //Text(entry.configuration.favoriteEmoji)
         }
     }
 }
@@ -80,13 +79,13 @@ struct QuickExpenseWidget: Widget {
     let kind: String = "WW_Widgets"
 
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: QuickExpenseIntent.self, provider: Provider()) { entry in
+		AppIntentConfiguration(kind: kind, intent: QuickExpenseIntent.self, provider: QuickExpenseProvider()) { entry in
             QuickExpenseEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
     }
 }
-
+/*
 extension QuickExpenseIntent {
     fileprivate static var smiley: QuickExpenseIntent {
         let intent = QuickExpenseIntent()
@@ -105,13 +104,12 @@ extension QuickExpenseIntent {
 		intent.favoriteEmoji = "🙋‍♂️"
 		return intent
 	}
-	
-	
 }
+ */
 
 #Preview(as: .systemSmall) {
     QuickExpenseWidget()
 } timeline: {
-    QuickExpenseEntry(date: .now, configuration: .smiley, quickExpense: QuickExpense(price: 23.3))
-    QuickExpenseEntry(date: .now, configuration: .thing, quickExpense: QuickExpense(price: 23.3))
+	QuickExpenseEntry(date: .now, configuration: QuickExpenseIntent(), quickExpense: QuickExpense(price: 23.3))
+	QuickExpenseEntry(date: .now, configuration: QuickExpenseIntent(), quickExpense: QuickExpense(price: 23.3))
 }

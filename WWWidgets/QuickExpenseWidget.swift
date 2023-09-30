@@ -8,6 +8,7 @@
 import WidgetKit
 import SwiftUI
 import SwiftData
+import AppIntents
 
 struct QuickExpenseProvider: AppIntentTimelineProvider {
 	
@@ -23,7 +24,7 @@ struct QuickExpenseProvider: AppIntentTimelineProvider {
 	
 	
     func placeholder(in context: Context) -> QuickExpenseEntry {
-        QuickExpenseEntry(date: Date(), configuration: QuickExpenseIntent(), quickExpense: QuickExpense(price: 23.3))
+        QuickExpenseEntry(date: Date(), configuration: QuickExpenseIntent())
     }
 
 	@MainActor
@@ -31,7 +32,7 @@ struct QuickExpenseProvider: AppIntentTimelineProvider {
 		
 		let quickExpenses = try? modelContainer.mainContext.fetch(FetchDescriptor<QuickExpense>())
 		
-		return QuickExpenseEntry(date: Date(), configuration: configuration, quickExpense: quickExpenses?[0] ?? QuickExpense(price: -1.00))
+		return QuickExpenseEntry(date: Date(), configuration: configuration)
     }
     
 	@MainActor
@@ -46,7 +47,7 @@ struct QuickExpenseProvider: AppIntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-			let entry = QuickExpenseEntry(date: entryDate, configuration: configuration, quickExpense: quickExpenses?[0] ?? QuickExpense(price: -1.00))
+			let entry = QuickExpenseEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
         }
         return Timeline(entries: entries, policy: .never)
@@ -56,15 +57,16 @@ struct QuickExpenseProvider: AppIntentTimelineProvider {
 struct QuickExpenseEntry: TimelineEntry {
     let date: Date
     let configuration: QuickExpenseIntent
-	let quickExpense: QuickExpense
+	//let quickExpense: QuickExpense
 }
 
 struct QuickExpenseEntryView : View {
     var entry: QuickExpenseProvider.Entry
-
+	
     var body: some View {
+		let quickEpense = try? entry.configuration.widgetQuickExpense.quickExpense ?? QuickExpense(price: -1.00)
         VStack {
-			Text(String(entry.quickExpense.price))
+			//Text(String(entry.quickExpense.price))
 			
             Text("This is the quickExpense stuff")
             //Text(entry.date, style: .time)
@@ -113,6 +115,6 @@ extension QuickExpenseIntent {
 #Preview(as: .systemSmall) {
     QuickExpenseWidget()
 } timeline: {
-	QuickExpenseEntry(date: .now, configuration: QuickExpenseIntent(), quickExpense: QuickExpense(price: 23.3))
-	QuickExpenseEntry(date: .now, configuration: QuickExpenseIntent(), quickExpense: QuickExpense(price: 23.3))
+	QuickExpenseEntry(date: .now, configuration: QuickExpenseIntent())
+	QuickExpenseEntry(date: .now, configuration: QuickExpenseIntent())
 }

@@ -80,7 +80,7 @@ struct QuickExpenseIntent: WidgetConfigurationIntent {
 
 	//configurable parameter.
 	@Parameter(title: "Quick Expense")
-	var quickExpense: WidgetQuickExpense
+	var widgetQuickExpense: WidgetQuickExpense
 	
 	
 }

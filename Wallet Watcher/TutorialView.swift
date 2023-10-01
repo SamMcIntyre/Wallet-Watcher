@@ -88,6 +88,16 @@ struct TutorialView: View {
 					Text("     - This is useful for when you will buy duplicate things, for instance buying many of the same drinks at a bar throughout the day.")
 						.frame(maxWidth: .infinity, alignment: .leading)
 						.font(.footnote)
+					Divider()
+					Text("How to use Widgets")
+						.frame(maxWidth: .infinity, alignment: .leading)
+						.font(.headline)
+					Text(" - This app supports widgets that allow you to see how much money you have spent so far from just your Home or Lock screen.")
+						.frame(maxWidth: .infinity, alignment: .leading)
+						.font(.footnote)
+					Text(" - Simply edit your Home or Lock screen and add widgets as you would any other, then select your choice of Wallet Watcher widgets!")
+						.frame(maxWidth: .infinity, alignment: .leading)
+						.font(.footnote)
 					
 					Spacer()
 				}

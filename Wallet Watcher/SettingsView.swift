@@ -161,7 +161,19 @@ struct SettingsView: View {
 					})
 					
 					Spacer()
-				}.padding(.top)
+				}
+				.padding(.top)
+				.padding(.bottom)
+				
+				Spacer()
+				Divider()
+				
+				//VERSION INFO
+				Text("©Wallet Watchers v1.12")
+					.font(.footnote)
+					.italic()
+					.foregroundStyle(Color.gray)
+					.padding(.top)
 			}
 		}
 		.onAppear(){

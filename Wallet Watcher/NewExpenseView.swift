@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import SwiftData
+import WidgetKit
 
 //Defines the New Expense View, which allows you to make a new expense
 struct NewExpenseView: View {
@@ -224,6 +225,11 @@ struct NewExpenseView: View {
 		} catch {
 			print(error.localizedDescription)
 		}
+		
+		//update widgets
+		WidgetCenter.shared.reloadAllTimelines()
+		
+		//dismiss
 		dismiss()
 	}
 	

@@ -29,6 +29,23 @@
 		E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */; };
 		E5B9A6A52AC2992500E3CAE8 /* FullExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */; };
 		E5B9A6A72AC2A32C00E3CAE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */; };
+		E5C2AD052AC61BC8008D9BE8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C2ACD22AC5E5D8008D9BE8 /* WidgetKit.framework */; };
+		E5C2AD062AC61BC8008D9BE8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C2ACD42AC5E5D8008D9BE8 /* SwiftUI.framework */; };
+		E5C2AD092AC61BC8008D9BE8 /* WWWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */; };
+		E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */; };
+		E5C2AD0D2AC61BC8008D9BE8 /* WalletStatusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */; };
+		E5C2AD132AC61BC9008D9BE8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF72AC36727004C949C /* Wallet.swift */; };
+		E5C2AD2E2AC62B10008D9BE8 /* QuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDED2AC33087004C949C /* QuickExpense.swift */; };
+		E5C2AD2F2AC62B16008D9BE8 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696E42AC2077200413ECA /* Expense.swift */; };
+		E5C2AD312AC64362008D9BE8 /* WalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */; };
+		E5C2AD322AC649A9008D9BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52696BE2AC1F8CB00413ECA /* Assets.xcassets */; };
+		E5C2AD342AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */; };
+		E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */; };
+		E5C2AD3A2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */; };
+		E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */; };
+		E5C2AD3D2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
+		E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +63,28 @@
 			remoteGlobalIDString = E52696B42AC1F8CA00413ECA;
 			remoteInfo = "Wallet Watcher";
 		};
+		E5C2AD112AC61BC9008D9BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52696AD2AC1F8CA00413ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C2AD032AC61BC8008D9BE8;
+			remoteInfo = WWWidgetsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5C2ACE52AC5E5D9008D9BE8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E5C2AD132AC61BC9008D9BE8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E52696B52AC1F8CA00413ECA /* Wallet Watcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wallet Watcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +112,18 @@
 		E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailView.swift; sourceTree = "<group>"; };
 		E5B9A6A42AC2992500E3CAE8 /* FullExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullExpenseListView.swift; sourceTree = "<group>"; };
 		E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E5C2ACD22AC5E5D8008D9BE8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E5C2ACD42AC5E5D8008D9BE8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WWWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWidgetsBundle.swift; sourceTree = "<group>"; };
+		E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletStatusWidget.swift; sourceTree = "<group>"; };
+		E5C2AD102AC61BC9008D9BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C2AD2B2AC626E7008D9BE8 /* Wallet Watcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wallet Watcher.entitlements"; sourceTree = "<group>"; };
+		E5C2AD2C2AC62797008D9BE8 /* WWWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WWWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWalletGaugeView.swift; sourceTree = "<group>"; };
+		E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccCircWalletGaugeView.swift; sourceTree = "<group>"; };
+		E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccRectWalletGaugeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,15 +148,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5C2AD012AC61BC8008D9BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C2AD062AC61BC8008D9BE8 /* SwiftUI.framework in Frameworks */,
+				E5C2AD052AC61BC8008D9BE8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E52696AC2AC1F8CA00413ECA = {
 			isa = PBXGroup;
 			children = (
+				E5C2AD302AC631C8008D9BE8 /* Shared */,
 				E52696B72AC1F8CA00413ECA /* Wallet Watcher */,
 				E52696CA2AC1F8CB00413ECA /* Wallet WatcherTests */,
 				E52696D42AC1F8CB00413ECA /* Wallet WatcherUITests */,
+				E5C2AD072AC61BC8008D9BE8 /* WWWidgets */,
+				E5C2ACD12AC5E5D8008D9BE8 /* Frameworks */,
 				E52696B62AC1F8CA00413ECA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +179,7 @@
 				E52696B52AC1F8CA00413ECA /* Wallet Watcher.app */,
 				E52696C72AC1F8CB00413ECA /* Wallet WatcherTests.xctest */,
 				E52696D12AC1F8CB00413ECA /* Wallet WatcherUITests.xctest */,
+				E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,9 +187,9 @@
 		E52696B72AC1F8CA00413ECA /* Wallet Watcher */ = {
 			isa = PBXGroup;
 			children = (
+				E5C2AD2B2AC626E7008D9BE8 /* Wallet Watcher.entitlements */,
 				E52696B82AC1F8CA00413ECA /* Wallet_WatcherApp.swift */,
 				E52696BA2AC1F8CA00413ECA /* ContentView.swift */,
-				E52696E42AC2077200413ECA /* Expense.swift */,
 				E58CDDE42AC307E1004C949C /* DefaultLoader.swift */,
 				E5B9A69A2AC21F4A00E3CAE8 /* NewExpenseView.swift */,
 				E58CDDF12AC344BE004C949C /* QuickListItemView.swift */,
@@ -135,13 +198,9 @@
 				E58CDDF32AC34ED3004C949C /* FullQuickListView.swift */,
 				E5B9A6A62AC2A32C00E3CAE8 /* SettingsView.swift */,
 				E58CDDEF2AC3436D004C949C /* ShortQuickListView.swift */,
-				E58CDDF72AC36727004C949C /* Wallet.swift */,
 				E58CDDF92AC39D08004C949C /* TutorialView.swift */,
-				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
-				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
 				E58CDDEB2AC32A55004C949C /* ExpenseListItemView.swift */,
 				E5B9A69E2AC223CE00E3CAE8 /* ExpenseDetailView.swift */,
-				E52696BE2AC1F8CB00413ECA /* Assets.xcassets */,
 				E52696C02AC1F8CB00413ECA /* Preview Content */,
 			);
 			path = "Wallet Watcher";
@@ -172,6 +231,42 @@
 			path = "Wallet WatcherUITests";
 			sourceTree = "<group>";
 		};
+		E5C2ACD12AC5E5D8008D9BE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5C2ACD22AC5E5D8008D9BE8 /* WidgetKit.framework */,
+				E5C2ACD42AC5E5D8008D9BE8 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5C2AD072AC61BC8008D9BE8 /* WWWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				E5C2AD2C2AC62797008D9BE8 /* WWWidgetsExtension.entitlements */,
+				E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */,
+				E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */,
+				E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */,
+				E5C2AD102AC61BC9008D9BE8 /* Info.plist */,
+			);
+			path = WWWidgets;
+			sourceTree = "<group>";
+		};
+		E5C2AD302AC631C8008D9BE8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E52696E42AC2077200413ECA /* Expense.swift */,
+				E58CDDF72AC36727004C949C /* Wallet.swift */,
+				E58CDDED2AC33087004C949C /* QuickExpense.swift */,
+				E5C2AD392AC681DE008D9BE8 /* AccCircWalletGaugeView.swift */,
+				E58CDDF52AC35E6A004C949C /* WalletGaugeView.swift */,
+				E5C2AD3C2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift */,
+				E5C2AD332AC64B26008D9BE8 /* SmallWalletGaugeView.swift */,
+				E52696BE2AC1F8CB00413ECA /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,10 +277,12 @@
 				E52696B12AC1F8CA00413ECA /* Sources */,
 				E52696B22AC1F8CA00413ECA /* Frameworks */,
 				E52696B32AC1F8CA00413ECA /* Resources */,
+				E5C2ACE52AC5E5D9008D9BE8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5C2AD122AC61BC9008D9BE8 /* PBXTargetDependency */,
 			);
 			name = "Wallet Watcher";
 			productName = "Wallet Watcher";
@@ -228,6 +325,23 @@
 			productReference = E52696D12AC1F8CB00413ECA /* Wallet WatcherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E5C2AD032AC61BC8008D9BE8 /* WWWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5C2AD162AC61BC9008D9BE8 /* Build configuration list for PBXNativeTarget "WWWidgetsExtension" */;
+			buildPhases = (
+				E5C2AD002AC61BC8008D9BE8 /* Sources */,
+				E5C2AD012AC61BC8008D9BE8 /* Frameworks */,
+				E5C2AD022AC61BC8008D9BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WWWidgetsExtension;
+			productName = WWWidgetsExtension;
+			productReference = E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,6 +363,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = E52696B42AC1F8CA00413ECA;
 					};
+					E5C2AD032AC61BC8008D9BE8 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = E52696B02AC1F8CA00413ECA /* Build configuration list for PBXProject "Wallet Watcher" */;
@@ -267,6 +384,7 @@
 				E52696B42AC1F8CA00413ECA /* Wallet Watcher */,
 				E52696C62AC1F8CB00413ECA /* Wallet WatcherTests */,
 				E52696D02AC1F8CB00413ECA /* Wallet WatcherUITests */,
+				E5C2AD032AC61BC8008D9BE8 /* WWWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +413,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5C2AD022AC61BC8008D9BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C2AD322AC649A9008D9BE8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -303,11 +429,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E58CDDF82AC36727004C949C /* Wallet.swift in Sources */,
+				E5C2AD3D2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */,
 				E52696E52AC2077200413ECA /* Expense.swift in Sources */,
 				E58CDDE52AC307E1004C949C /* DefaultLoader.swift in Sources */,
 				E5B9A69F2AC223CE00E3CAE8 /* ExpenseDetailView.swift in Sources */,
 				E58CDDF42AC34ED3004C949C /* FullQuickListView.swift in Sources */,
+				E5C2AD342AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
 				E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */,
+				E5C2AD3A2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */,
 				E58CDDEA2AC32736004C949C /* ShortExpenseListView.swift in Sources */,
 				E58CDDF02AC3436D004C949C /* ShortQuickListView.swift in Sources */,
 				E58CDDF22AC344BE004C949C /* QuickListItemView.swift in Sources */,
@@ -339,6 +468,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5C2AD002AC61BC8008D9BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C2AD2F2AC62B16008D9BE8 /* Expense.swift in Sources */,
+				E5C2AD3E2AC6824F008D9BE8 /* AccRectWalletGaugeView.swift in Sources */,
+				E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */,
+				E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */,
+				E5C2AD3B2AC681DE008D9BE8 /* AccCircWalletGaugeView.swift in Sources */,
+				E5C2AD352AC64B26008D9BE8 /* SmallWalletGaugeView.swift in Sources */,
+				E5C2AD2E2AC62B10008D9BE8 /* QuickExpense.swift in Sources */,
+				E5C2AD092AC61BC8008D9BE8 /* WWWidgetsBundle.swift in Sources */,
+				E5C2AD0D2AC61BC8008D9BE8 /* WalletStatusWidget.swift in Sources */,
+				E5C2AD312AC64362008D9BE8 /* WalletGaugeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -351,6 +497,11 @@
 			isa = PBXTargetDependency;
 			target = E52696B42AC1F8CA00413ECA /* Wallet Watcher */;
 			targetProxy = E52696D22AC1F8CB00413ECA /* PBXContainerItemProxy */;
+		};
+		E5C2AD122AC61BC9008D9BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C2AD032AC61BC8008D9BE8 /* WWWidgetsExtension */;
+			targetProxy = E5C2AD112AC61BC9008D9BE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -477,8 +628,10 @@
 		E52696DC2AC1F8CB00413ECA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wallet Watcher/Wallet Watcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wallet Watcher/Preview Content\"";
@@ -510,8 +663,10 @@
 		E52696DD2AC1F8CB00413ECA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wallet Watcher/Wallet Watcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wallet Watcher/Preview Content\"";
@@ -616,6 +771,62 @@
 			};
 			name = Release;
 		};
+		E5C2AD142AC61BC9008D9BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WWWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WYX8JDTD8K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WWWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WWWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbalStudios.Wallet-Watcher.WWWidgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5C2AD152AC61BC9008D9BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WWWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WYX8JDTD8K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WWWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WWWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbalStudios.Wallet-Watcher.WWWidgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -651,6 +862,15 @@
 			buildConfigurations = (
 				E52696E22AC1F8CB00413ECA /* Debug */,
 				E52696E32AC1F8CB00413ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5C2AD162AC61BC9008D9BE8 /* Build configuration list for PBXNativeTarget "WWWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5C2AD142AC61BC9008D9BE8 /* Debug */,
+				E5C2AD152AC61BC9008D9BE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

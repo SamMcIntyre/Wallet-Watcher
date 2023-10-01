@@ -6,21 +6,16 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct WalletGaugeView: View {
 	let wallet :Wallet
-	
-	@Environment(\.modelContext) private var modelContext
-
-	@Query(sort: \Expense.timestamp, order: .reverse)
-	private var expenses: [Expense]
 	
 	let defaults = UserDefaults.standard
 	
     var body: some View {
 		HStack{
 			Spacer()
+			
 			Gauge(value: wallet.spent, in: 0...wallet.budget) {
 				Image("WalletWatcher_logo")
 					.resizable(resizingMode: .stretch)
@@ -38,9 +33,8 @@ struct WalletGaugeView: View {
 					.font(.caption2.monospaced())
 			}
 			.gaugeStyle(DefaultGaugeStyle())
-			.tint(.green)
-			.onAppear(){
-			}
+			.tint(.wwDarkGreen)
+			
 			Spacer()
 		}
     }

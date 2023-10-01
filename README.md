@@ -48,4 +48,4 @@ One might be able to download this repo and build the project within Xcode thems
 
 The app is fully functional currently. I may later add a couple more features like widgets and iWatch support, but for now it works well.
 
-*Version 1.04*    -    *Requires iOS 17.0+*
+*Version 1.12*    -    *Requires iOS 17.0+*

@@ -82,7 +82,7 @@ struct StatusEntryView : View {
 					SmallWalletGaugeView(wallet: entry.wallet)
 				case .systemMedium:
 					WalletGaugeView(wallet: entry.wallet)
-						.frame(width: 340, height: 175)
+						//.frame(width: 340, height: 175)
 				case .accessoryCircular:
 					AccCircWalletGaugeView(wallet: entry.wallet)
 				case .accessoryRectangular:
@@ -104,7 +104,7 @@ struct WalletStatusWidget: Widget {
                 StatusEntryView(entry: entry)
 					.frame(maxWidth: .infinity, maxHeight:.infinity)
                     .containerBackground(.fill.tertiary, for: .widget)
-					.background(Color.widgetBackground.gradient)
+					.background(Color.widgetBackground)
 					.clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             } else {
                 StatusEntryView(entry: entry)
@@ -115,6 +115,7 @@ struct WalletStatusWidget: Widget {
         .configurationDisplayName("Wallet Status")
         .description("Displays your current wallet status.")
 		.supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
+		.contentMarginsDisabled()
     }
 }
 

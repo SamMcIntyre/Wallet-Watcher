@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51352E32B49EEAA003B32F8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E52696B92AC1F8CA00413ECA /* Wallet_WatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696B82AC1F8CA00413ECA /* Wallet_WatcherApp.swift */; };
 		E52696BB2AC1F8CA00413ECA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696BA2AC1F8CA00413ECA /* ContentView.swift */; };
 		E52696BF2AC1F8CB00413ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52696BE2AC1F8CB00413ECA /* Assets.xcassets */; };
@@ -34,7 +35,6 @@
 		E5C2AD092AC61BC8008D9BE8 /* WWWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD082AC61BC8008D9BE8 /* WWWidgetsBundle.swift */; };
 		E5C2AD0B2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD0A2AC61BC8008D9BE8 /* WWWidgetsLiveActivity.swift */; };
 		E5C2AD0D2AC61BC8008D9BE8 /* WalletStatusWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2AD0C2AC61BC8008D9BE8 /* WalletStatusWidget.swift */; };
-		E5C2AD132AC61BC9008D9BE8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E5C2AD042AC61BC8008D9BE8 /* WWWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E5C2AD2D2AC62854008D9BE8 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDF72AC36727004C949C /* Wallet.swift */; };
 		E5C2AD2E2AC62B10008D9BE8 /* QuickExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58CDDED2AC33087004C949C /* QuickExpense.swift */; };
 		E5C2AD2F2AC62B16008D9BE8 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52696E42AC2077200413ECA /* Expense.swift */; };
@@ -49,6 +49,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E51352E12B49EEA1003B32F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52696AD2AC1F8CA00413ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C2AD032AC61BC8008D9BE8;
+			remoteInfo = WWWidgetsExtension;
+		};
+		E51352E42B49EEAA003B32F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52696AD2AC1F8CA00413ECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C2AD032AC61BC8008D9BE8;
+			remoteInfo = WWWidgetsExtension;
+		};
 		E52696C82AC1F8CB00413ECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E52696AD2AC1F8CA00413ECA /* Project object */;
@@ -63,26 +77,19 @@
 			remoteGlobalIDString = E52696B42AC1F8CA00413ECA;
 			remoteInfo = "Wallet Watcher";
 		};
-		E5C2AD112AC61BC9008D9BE8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E52696AD2AC1F8CA00413ECA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E5C2AD032AC61BC8008D9BE8;
-			remoteInfo = WWWidgetsExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E5C2ACE52AC5E5D9008D9BE8 /* Embed Foundation Extensions */ = {
+		E51352E62B49EEAA003B32F8 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E5C2AD132AC61BC9008D9BE8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */,
+				E51352E32B49EEAA003B32F8 /* WWWidgetsExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -277,12 +284,13 @@
 				E52696B12AC1F8CA00413ECA /* Sources */,
 				E52696B22AC1F8CA00413ECA /* Frameworks */,
 				E52696B32AC1F8CA00413ECA /* Resources */,
-				E5C2ACE52AC5E5D9008D9BE8 /* Embed Foundation Extensions */,
+				E51352E62B49EEAA003B32F8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E5C2AD122AC61BC9008D9BE8 /* PBXTargetDependency */,
+				E51352E22B49EEA1003B32F8 /* PBXTargetDependency */,
+				E51352E52B49EEAA003B32F8 /* PBXTargetDependency */,
 			);
 			name = "Wallet Watcher";
 			productName = "Wallet Watcher";
@@ -488,6 +496,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E51352E22B49EEA1003B32F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C2AD032AC61BC8008D9BE8 /* WWWidgetsExtension */;
+			targetProxy = E51352E12B49EEA1003B32F8 /* PBXContainerItemProxy */;
+		};
+		E51352E52B49EEAA003B32F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C2AD032AC61BC8008D9BE8 /* WWWidgetsExtension */;
+			targetProxy = E51352E42B49EEAA003B32F8 /* PBXContainerItemProxy */;
+		};
 		E52696C92AC1F8CB00413ECA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E52696B42AC1F8CA00413ECA /* Wallet Watcher */;
@@ -497,11 +515,6 @@
 			isa = PBXTargetDependency;
 			target = E52696B42AC1F8CA00413ECA /* Wallet Watcher */;
 			targetProxy = E52696D22AC1F8CB00413ECA /* PBXContainerItemProxy */;
-		};
-		E5C2AD122AC61BC9008D9BE8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E5C2AD032AC61BC8008D9BE8 /* WWWidgetsExtension */;
-			targetProxy = E5C2AD112AC61BC9008D9BE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -628,10 +641,10 @@
 		E52696DC2AC1F8CB00413ECA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Wallet Watcher/Wallet Watcher.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wallet Watcher/Preview Content\"";
@@ -654,6 +667,7 @@
 				MARKETING_VERSION = 1.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbal.Wallet-Watcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -663,10 +677,10 @@
 		E52696DD2AC1F8CB00413ECA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Wallet Watcher/Wallet Watcher.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wallet Watcher/Preview Content\"";
@@ -689,6 +703,7 @@
 				MARKETING_VERSION = 1.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbal.Wallet-Watcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -789,8 +804,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbalStudios.Wallet-Watcher.WWWidgets";
+				MARKETING_VERSION = 1.12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbal.Wallet-Watcher.WWWidgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -817,8 +832,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbalStudios.Wallet-Watcher.WWWidgets";
+				MARKETING_VERSION = 1.12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RocketGimbal.Wallet-Watcher.WWWidgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.RocketGimbalStudios.Wallet-Watcher</string>
+		<string>group.com.RocketGimbal.Wallet-Watcher</string>
 	</array>
 </dict>
 </plist>

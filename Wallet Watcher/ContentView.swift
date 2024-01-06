@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Wallet Watcher
+//  Wallet Watchman AKA Wallet Watcher
 //
 //  Created by Sam McIntyre on 9/25/23.
 //
@@ -27,7 +27,7 @@ struct ContentView: View {
 			ScrollView{
 				VStack{
 					//title
-					Text("Wallet Watcher").font(.title).padding(.leastNonzeroMagnitude)
+					Text("Wallet Watchman").font(.title).padding(.leastNonzeroMagnitude)
 					
 					//Display wallet gauge
 					ForEach(wallets) { wallet in

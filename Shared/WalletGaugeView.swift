@@ -16,7 +16,7 @@ struct WalletGaugeView: View {
 		HStack{
 			Spacer()
 			
-			Gauge(value: wallet.spent, in: 0...wallet.budget) {
+			Gauge(value: wallet.spent > wallet.budget ? wallet.budget : wallet.spent, in: 0...wallet.budget) {
 				Image("WalletWatcher_logo")
 					.resizable(resizingMode: .stretch)
 					.aspectRatio(contentMode: .fill)
